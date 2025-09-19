@@ -4,8 +4,8 @@ info:
   description: ''
   version: 1.0.0
 tags:
-  - name: SocialAuth
   - name: Auth
+  - name: SocialAuth
   - name: LearnMoreAi
   - name: NewDeal
   - name: ManageCollaborator
@@ -13,25 +13,149 @@ tags:
   - name: Meeting
   - name: FindAMatch
   - name: Banker
+  - name: Docusign
   - name: Borrower
   - name: Footer
   - name: LandingPage
   - name: Profile
-  - name: Docusign
 paths:
-  /social-auth/sign-up/{provider}:
-    get:
-      summary: Social - Signup
+  /auth/login:
+    post:
+      summary: login
       deprecated: false
       description: ''
       tags:
-        - SocialAuth
+        - Auth
       parameters:
-        - name: provider
-          in: path
-          description: google / linkedin / apple / cb
+        - name: Content-Type
+          in: header
+          description: ''
           required: true
-          example: google
+          example: application/json
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                password:
+                  type: string
+              required:
+                - email
+                - password
+            example:
+              email: banker.1@yopmail.com
+              password: Orex@123
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: {}
+          headers: {}
+      security:
+        - bearer: []
+  /auth/resend-otp:
+    post:
+      summary: resend-otp
+      deprecated: false
+      description: ''
+      tags:
+        - Auth
+      parameters:
+        - name: Content-Type
+          in: header
+          description: ''
+          required: true
+          example: application/json
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+              required:
+                - email
+            example:
+              email: hir3@abcbank.com
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: {}
+          headers: {}
+      security:
+        - bearer: []
+  /auth/verfiy-otp:
+    post:
+      summary: verfiy-otp
+      deprecated: false
+      description: ''
+      tags:
+        - Auth
+      parameters:
+        - name: Content-Type
+          in: header
+          description: ''
+          required: true
+          example: application/json
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                otp:
+                  type: string
+              required:
+                - email
+                - otp
+            example:
+              email: hir333@abcbank.com
+              otp: '123456'
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: {}
+          headers: {}
+      security:
+        - bearer: []
+  /auth/logout:
+    post:
+      summary: logout
+      deprecated: false
+      description: ''
+      tags:
+        - Auth
+      parameters:
+        - name: Authorization
+          in: header
+          description: ''
+          required: true
+          example: >-
+            Bearer
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ZjRhOTMwMzVjMTQ3Njg2NTNkZmM4ZCIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzQ0MDg3MzQ0LCJleHAiOjE3NDQxNzM3NDR9.kbOG2os4LYH0yt2CYYEihmBaaFjgOql9SZGSBwMdiuY
           schema:
             type: string
       responses:
@@ -45,21 +169,42 @@ paths:
           headers: {}
       security:
         - bearer: []
-  /social-auth/sign-in/{provider}:
-    get:
-      summary: Social - Signin
+  /auth/register/:
+    post:
+      summary: lender-register
       deprecated: false
       description: ''
       tags:
-        - SocialAuth
+        - Auth
       parameters:
-        - name: provider
-          in: path
-          description: google / linkedin / apple / cb
-          required: true
-          example: google
+        - name: type
+          in: query
+          description: ''
+          required: false
+          example: banker
           schema:
             type: string
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                bankerData:
+                  example: >-
+                    {"financialInstitutionName":"Brenden
+                    Hewitt","email":"tafety@mailinator.com","password":"Pa$$w0rd!","confirmPassword":"Pa$$w0rd!","firstName":"Stella","middleInitial":"Simon
+                    Goff","lastName":"Parrish","title":"Ipsam sequi
+                    nesciunt","bankType":"Commercial","assetSize":"Small","phone":"(123)
+                    456-7890","areaOfSpecialty":"Factoring","address":[{"address1":null,"address2":null,"city":"","state":"","zip":null,"country":"United
+                    States","longitude":"-106.5348379","latitude":"38.7945952","fullAddress":"United
+                    States","suiteNo":""}]}
+                  type: string
+                bankLogo:
+                  format: binary
+                  type: string
+                  example: cmMtdXBsb2FkLTE3NTgxNzEzOTIwNjctNQ==/download.png
+            examples: {}
       responses:
         '200':
           description: ''
@@ -71,21 +216,33 @@ paths:
           headers: {}
       security:
         - bearer: []
-  /social-auth/callback/{provider}:
-    get:
-      summary: Social - Callback
+  /auth/resend-email:
+    post:
+      summary: borrower-resend-email
       deprecated: false
       description: ''
       tags:
-        - SocialAuth
+        - Auth
       parameters:
-        - name: provider
-          in: path
-          description: google / linkedin / apple / cb
+        - name: Content-Type
+          in: header
+          description: ''
           required: true
-          example: google
+          example: application/json
           schema:
             type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+              required:
+                - email
+            example:
+              email: hiren.lalani.ordex@gmail.com
       responses:
         '200':
           description: ''
@@ -97,28 +254,68 @@ paths:
           headers: {}
       security:
         - bearer: []
-  /social-auth/auth-data/{provider}/{token}:
+  /auth/verfiy-email/{userId}/{token}:
     get:
-      summary: Social - auth-data
+      summary: borrower-verfiy-email
       deprecated: false
       description: ''
       tags:
-        - SocialAuth
+        - Auth
       parameters:
-        - name: provider
+        - name: userId
           in: path
-          description: google / linkedin / apple / cb
+          description: ''
           required: true
-          example: google
           schema:
             type: string
         - name: token
           in: path
           description: ''
           required: true
-          example: test12345
+          example: a91c2a6a350c2508d2c52120e60052122888d1e61cebf74ae1162fa84481bdb9
           schema:
             type: string
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: {}
+          headers: {}
+      security:
+        - bearer: []
+  /auth/resend-email-otp:
+    post:
+      summary: lender-resend-email-otp
+      deprecated: false
+      description: ''
+      tags:
+        - Auth
+      parameters:
+        - name: Content-Type
+          in: header
+          description: ''
+          required: true
+          example: application/json
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                password:
+                  type: string
+              required:
+                - email
+                - password
+            example:
+              email: banker.1@yopmail.com
       responses:
         '200':
           description: ''
@@ -132,7 +329,7 @@ paths:
         - bearer: []
   /auth/verify-email-otp:
     post:
-      summary: verify email otp
+      summary: lender-verify-email-otp
       deprecated: false
       description: ''
       tags:
@@ -172,9 +369,9 @@ paths:
           headers: {}
       security:
         - bearer: []
-  /auth/resend-email-otp:
+  /auth/forgot-password:
     post:
-      summary: resend email otp
+      summary: forgot-password
       deprecated: false
       description: ''
       tags:
@@ -195,13 +392,95 @@ paths:
               properties:
                 email:
                   type: string
+              required:
+                - email
+            example:
+              email: hiren.lalani.ordex@gmail.com
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: {}
+          headers: {}
+      security:
+        - bearer: []
+  /auth/reset-password:
+    post:
+      summary: reset-password
+      deprecated: false
+      description: ''
+      tags:
+        - Auth
+      parameters:
+        - name: Content-Type
+          in: header
+          description: ''
+          required: true
+          example: application/json
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                token:
+                  type: string
                 password:
                   type: string
               required:
-                - email
+                - token
                 - password
             example:
-              email: banker.1@yopmail.com
+              password: Ordex@123
+              token: d5bac619d26552a9b1e7806fb1b81e56dcecb4aa61d870b3ed2bcda41fd2776c
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: {}
+          headers: {}
+      security:
+        - bearer: []
+  /auth/change-password:
+    post:
+      summary: change-password
+      deprecated: false
+      description: ''
+      tags:
+        - Auth
+      parameters:
+        - name: Content-Type
+          in: header
+          description: ''
+          required: true
+          example: application/json
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                oldPassword:
+                  type: string
+                newPassword:
+                  type: string
+              required:
+                - oldPassword
+                - newPassword
+            example:
+              oldPassword: Ordex@1234
+              newPassword: Ordex@123
+              confirmPassword: Ordex@123
       responses:
         '200':
           description: ''
@@ -347,379 +626,106 @@ paths:
           headers: {}
       security:
         - bearer: []
-  /auth/login:
-    post:
-      summary: login
-      deprecated: false
-      description: ''
-      tags:
-        - Auth
-      parameters:
-        - name: Content-Type
-          in: header
-          description: ''
-          required: true
-          example: application/json
-          schema:
-            type: string
-      requestBody:
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                email:
-                  type: string
-                password:
-                  type: string
-              required:
-                - email
-                - password
-            example:
-              email: banker.1@yopmail.com
-              password: Orex@123
-      responses:
-        '200':
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                properties: {}
-          headers: {}
-      security:
-        - bearer: []
-  /auth/logout:
-    post:
-      summary: logout
-      deprecated: false
-      description: ''
-      tags:
-        - Auth
-      parameters:
-        - name: Authorization
-          in: header
-          description: ''
-          required: true
-          example: >-
-            Bearer
-            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ZjRhOTMwMzVjMTQ3Njg2NTNkZmM4ZCIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzQ0MDg3MzQ0LCJleHAiOjE3NDQxNzM3NDR9.kbOG2os4LYH0yt2CYYEihmBaaFjgOql9SZGSBwMdiuY
-          schema:
-            type: string
-      responses:
-        '200':
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                properties: {}
-          headers: {}
-      security:
-        - bearer: []
-  /auth/register/:
-    post:
-      summary: register Borrower
-      deprecated: false
-      description: ''
-      tags:
-        - Auth
-      parameters:
-        - name: type
-          in: query
-          description: ''
-          required: false
-          example: borrower
-          schema:
-            type: string
-      requestBody:
-        content:
-          application/json:
-            schema:
-              type: string
-            example:
-              email: borrower@abcbank.com
-              password: StrongP@ssw0rd!
-              confirmPassword: StrongP@ssw0rd!
-              firstName: John
-              middleInitial: D
-              lastName: Doe
-              phone: '+1234567890'
-              position: xyz
-              coname: abc
-      responses:
-        '200':
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                properties: {}
-          headers: {}
-      security:
-        - bearer: []
-  /auth/verfiy-email/{userId}/{token}:
+  /social-auth/sign-up/{provider}:
     get:
-      summary: verfiy-email
+      summary: social-signup
       deprecated: false
       description: ''
       tags:
-        - Auth
+        - SocialAuth
       parameters:
-        - name: userId
+        - name: provider
           in: path
-          description: ''
+          description: google / linkedin / apple / cb
           required: true
+          example: google
+          schema:
+            type: string
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: {}
+          headers: {}
+      security:
+        - bearer: []
+  /social-auth/sign-in/{provider}:
+    get:
+      summary: social-signin
+      deprecated: false
+      description: ''
+      tags:
+        - SocialAuth
+      parameters:
+        - name: provider
+          in: path
+          description: google / linkedin / apple / cb
+          required: true
+          example: google
+          schema:
+            type: string
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: {}
+          headers: {}
+      security:
+        - bearer: []
+  /social-auth/callback/{provider}:
+    get:
+      summary: social-callback
+      deprecated: false
+      description: ''
+      tags:
+        - SocialAuth
+      parameters:
+        - name: provider
+          in: path
+          description: google / linkedin / apple / cb
+          required: true
+          example: google
+          schema:
+            type: string
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: {}
+          headers: {}
+      security:
+        - bearer: []
+  /social-auth/auth-data/{provider}/{token}:
+    get:
+      summary: social-auth-data
+      deprecated: false
+      description: ''
+      tags:
+        - SocialAuth
+      parameters:
+        - name: provider
+          in: path
+          description: google / linkedin / apple / cb
+          required: true
+          example: google
           schema:
             type: string
         - name: token
           in: path
           description: ''
           required: true
-          example: a91c2a6a350c2508d2c52120e60052122888d1e61cebf74ae1162fa84481bdb9
+          example: test12345
           schema:
             type: string
-      responses:
-        '200':
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                properties: {}
-          headers: {}
-      security:
-        - bearer: []
-  /auth/forgot-password:
-    post:
-      summary: forget Password
-      deprecated: false
-      description: ''
-      tags:
-        - Auth
-      parameters:
-        - name: Content-Type
-          in: header
-          description: ''
-          required: true
-          example: application/json
-          schema:
-            type: string
-      requestBody:
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                email:
-                  type: string
-              required:
-                - email
-            example:
-              email: hiren.lalani.ordex@gmail.com
-      responses:
-        '200':
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                properties: {}
-          headers: {}
-      security:
-        - bearer: []
-  /auth/reset-password:
-    post:
-      summary: rest_password
-      deprecated: false
-      description: ''
-      tags:
-        - Auth
-      parameters:
-        - name: Content-Type
-          in: header
-          description: ''
-          required: true
-          example: application/json
-          schema:
-            type: string
-      requestBody:
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                token:
-                  type: string
-                password:
-                  type: string
-              required:
-                - token
-                - password
-            example:
-              password: Ordex@123
-              token: d5bac619d26552a9b1e7806fb1b81e56dcecb4aa61d870b3ed2bcda41fd2776c
-      responses:
-        '200':
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                properties: {}
-          headers: {}
-      security:
-        - bearer: []
-  /auth/resend-email:
-    post:
-      summary: resend - email
-      deprecated: false
-      description: ''
-      tags:
-        - Auth
-      parameters:
-        - name: Content-Type
-          in: header
-          description: ''
-          required: true
-          example: application/json
-          schema:
-            type: string
-      requestBody:
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                email:
-                  type: string
-              required:
-                - email
-            example:
-              email: hiren.lalani.ordex@gmail.com
-      responses:
-        '200':
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                properties: {}
-          headers: {}
-      security:
-        - bearer: []
-  /auth/verfiy-otp:
-    post:
-      summary: verfiy-otp
-      deprecated: false
-      description: ''
-      tags:
-        - Auth
-      parameters:
-        - name: Content-Type
-          in: header
-          description: ''
-          required: true
-          example: application/json
-          schema:
-            type: string
-      requestBody:
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                email:
-                  type: string
-                otp:
-                  type: string
-              required:
-                - email
-                - otp
-            example:
-              email: hir333@abcbank.com
-              otp: '123456'
-      responses:
-        '200':
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                properties: {}
-          headers: {}
-      security:
-        - bearer: []
-  /auth/resend-otp:
-    post:
-      summary: resend-otp
-      deprecated: false
-      description: ''
-      tags:
-        - Auth
-      parameters:
-        - name: Content-Type
-          in: header
-          description: ''
-          required: true
-          example: application/json
-          schema:
-            type: string
-      requestBody:
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                email:
-                  type: string
-              required:
-                - email
-            example:
-              email: hir3@abcbank.com
-      responses:
-        '200':
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                properties: {}
-          headers: {}
-      security:
-        - bearer: []
-  /auth/change-password:
-    post:
-      summary: change-password
-      deprecated: false
-      description: ''
-      tags:
-        - Auth
-      parameters:
-        - name: Content-Type
-          in: header
-          description: ''
-          required: true
-          example: application/json
-          schema:
-            type: string
-      requestBody:
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                oldPassword:
-                  type: string
-                newPassword:
-                  type: string
-              required:
-                - oldPassword
-                - newPassword
-            example:
-              oldPassword: Ordex@1234
-              newPassword: Ordex@123
-              confirmPassword: Ordex@123
       responses:
         '200':
           description: ''
@@ -733,7 +739,7 @@ paths:
         - bearer: []
   /ai/options:
     get:
-      summary: GET-LM-Options
+      summary: bor-dashboard-lm-options
       deprecated: false
       description: ''
       tags:
@@ -776,6 +782,25 @@ paths:
           headers: {}
       security:
         - bearer: []
+  /ai/chatbot/categories-qa:
+    get:
+      summary: bot-area-options
+      deprecated: false
+      description: ''
+      tags:
+        - LearnMoreAi
+      parameters: []
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: {}
+          headers: {}
+      security:
+        - bearer: []
   /ai/get-response-openai:
     post:
       summary: GET Response from ai
@@ -803,35 +828,9 @@ paths:
           headers: {}
       security:
         - bearer: []
-  /new-deal/ratio-pdf-data/{loanRequestId}:
-    get:
-      summary: ratio-pdf-data
-      deprecated: false
-      description: ''
-      tags:
-        - NewDeal
-      parameters:
-        - name: loanRequestId
-          in: path
-          description: ''
-          required: true
-          example: 687600c8978bcedc3a649aa4
-          schema:
-            type: string
-      responses:
-        '200':
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                properties: {}
-          headers: {}
-      security:
-        - bearer: []
   /new-deal/get-loan-count/{userId}:
     get:
-      summary: get-loan-count
+      summary: bor-dashboard-get-loan-count
       deprecated: false
       description: ''
       tags:
@@ -863,183 +862,9 @@ paths:
           headers: {}
       security:
         - bearer: []
-  /new-deal/get-all-loan/{userId}:
-    get:
-      summary: get-all-loan
-      deprecated: false
-      description: ''
-      tags:
-        - NewDeal
-      parameters:
-        - name: userId
-          in: path
-          description: ''
-          required: true
-          schema:
-            type: string
-        - name: from
-          in: query
-          description: ''
-          required: false
-          example: '2025-07-07'
-          schema:
-            type: string
-        - name: to
-          in: query
-          description: ''
-          required: false
-          example: '2025-07-09'
-          schema:
-            type: string
-        - name: status
-          in: query
-          description: ''
-          required: false
-          example: DRAFT
-          schema:
-            type: string
-        - name: page
-          in: query
-          description: ''
-          required: false
-          example: 1
-          schema:
-            type: number
-        - name: pageSize
-          in: query
-          description: ''
-          required: false
-          example: 10
-          schema:
-            type: number
-        - name: refreshToken
-          in: header
-          description: ''
-          required: false
-          example: >-
-            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NjUxOTBkNDhhODQxNzIwYmYwY2NmZiIsInJvbGUiOiJCb3Jyb3dlciIsImlhdCI6MTc1MTk1NDI5NywiZXhwIjoxNzUyNTU5MDk3fQ.iPIbbwUoCwZgC4gQJHNK8C07pxhZ3Pw0IiOINGJsIN4
-          schema:
-            type: string
-      responses:
-        '200':
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                properties: {}
-          headers: {}
-      security:
-        - bearer: []
-  /new-deal/review-pdf-data/{loanRequestId}:
-    get:
-      summary: review-pdf-data-2
-      deprecated: false
-      description: ''
-      tags:
-        - NewDeal
-      parameters:
-        - name: loanRequestId
-          in: path
-          description: ''
-          required: true
-          example: 6875f6116a23024bd12a4567
-          schema:
-            type: string
-        - name: refreshToken
-          in: header
-          description: ''
-          required: false
-          example: >-
-            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NjUxOTBkNDhhODQxNzIwYmYwY2NmZiIsInJvbGUiOiJCb3Jyb3dlciIsImlhdCI6MTc1MTk1NDI5NywiZXhwIjoxNzUyNTU5MDk3fQ.iPIbbwUoCwZgC4gQJHNK8C07pxhZ3Pw0IiOINGJsIN4
-          schema:
-            type: string
-      responses:
-        '200':
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                properties: {}
-          headers: {}
-      security:
-        - bearer: []
-  /new-deal/update-pdf-data/{loanRequestId}:
-    patch:
-      summary: update-pdf-data
-      deprecated: false
-      description: ''
-      tags:
-        - NewDeal
-      parameters:
-        - name: loanRequestId
-          in: path
-          description: ''
-          required: true
-          example: 6870d85a2105083752abb2ff
-          schema:
-            type: string
-        - name: refreshToken
-          in: header
-          description: ''
-          required: false
-          example: >-
-            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NjUxOTBkNDhhODQxNzIwYmYwY2NmZiIsInJvbGUiOiJCb3Jyb3dlciIsImlhdCI6MTc1MTk1NDI5NywiZXhwIjoxNzUyNTU5MDk3fQ.iPIbbwUoCwZgC4gQJHNK8C07pxhZ3Pw0IiOINGJsIN4
-          schema:
-            type: string
-      requestBody:
-        content:
-          application/json:
-            schema:
-              type: object
-              properties: {}
-            example:
-              loanType: Working Capital
-              loanAmount: 500000
-              additionalInfo: hiiiii
-              loanDocuments:
-                - documentId: 6870a7bd2105083752aba47d
-                  parsedValueId: 6870a7dabfc3577fde3e954b
-                  parsedRatiosMapped:
-                    - name: year
-                      displayName: Year
-                      value: 2023
-                      formula: null
-                      evaluated: null
-                      result: 2023
-                    - name: netProfit
-                      displayName: Net Profit
-                      value: null
-                      formula: '{Schedule_M1_Line_1}'
-                      evaluated: '-61426'
-                      result: -61426
-                    - name: ebitda
-                      displayName: EBITDA
-                      value: null
-                      formula: ({Schedule_M1_Line_1} + {Line_13} + {Line_14})
-                      evaluated: (-61426 + 165403 + 14761)
-                      result: 119738
-                    - name: debtToEquity
-                      displayName: Debt to Equity
-                      value: null
-                      formula: ({totalLiabilities}) / ({netWorth})
-                      evaluated: (100000 / 50000)
-                      result: 2
-      responses:
-        '200':
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                properties: {}
-          headers: {}
-      security:
-        - bearer: []
   /new-deal/new-loan-request:
     post:
-      summary: New-Loan-Request
+      summary: s1-new-loan-request
       deprecated: false
       description: ''
       tags:
@@ -1153,35 +978,9 @@ paths:
           headers: {}
       security:
         - bearer: []
-  /new-deal/drafts/{userId}:
-    get:
-      summary: Get Borrower Deals Drafts by borrower user Id
-      deprecated: false
-      description: ''
-      tags:
-        - NewDeal
-      parameters:
-        - name: userId
-          in: path
-          description: ''
-          required: true
-          example: 68412a81eafa464c9f44c3fc
-          schema:
-            type: string
-      responses:
-        '200':
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                properties: {}
-          headers: {}
-      security:
-        - bearer: []
   /new-deal/loan-request-step-1/{loanRequestId}:
     get:
-      summary: loan-request-get-1
+      summary: s1-loan-request-get-1
       deprecated: false
       description: ''
       tags:
@@ -1206,7 +1005,7 @@ paths:
       security:
         - bearer: []
     patch:
-      summary: Update Loan Req Step-1
+      summary: s1-update-loan-req-step-1
       deprecated: false
       description: ''
       tags:
@@ -1351,9 +1150,9 @@ paths:
           headers: {}
       security:
         - bearer: []
-  /new-deal/loan-request-submit/{loanRequestId}:
-    post:
-      summary: loan-request-submit-3
+  /new-deal/review-pdf-data/{loanRequestId}:
+    get:
+      summary: s2-review-pdf-data-2
       deprecated: false
       description: ''
       tags:
@@ -1363,84 +1162,15 @@ paths:
           in: path
           description: ''
           required: true
-          example: 68762ce258d2102daa488598
+          example: 6875f6116a23024bd12a4567
           schema:
             type: string
-      requestBody:
-        content:
-          application/json:
-            schema:
-              type: object
-              properties: {}
-              required:
-                - 01K08T8PV33FM50EGYCM5TPPTH
-            example:
-              status: SUBMITTED
-              updatedBy: 68412a81eafa464c9f44c3fc
-      responses:
-        '200':
+        - name: refreshToken
+          in: header
           description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                properties: {}
-          headers: {}
-      security:
-        - bearer: []
-  /new-deal/loan-request/{loanRequestId}/{userId}:
-    patch:
-      summary: Delete Loan Request
-      deprecated: false
-      description: ''
-      tags:
-        - NewDeal
-      parameters:
-        - name: loanRequestId
-          in: path
-          description: ''
-          required: true
-          example: 687e222cbdfe1de00e5ee43c
-          schema:
-            type: string
-        - name: userId
-          in: path
-          description: ''
-          required: true
-          example: 683eb91486a309b8f3d80187
-          schema:
-            type: string
-      responses:
-        '200':
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                properties: {}
-          headers: {}
-      security:
-        - bearer: []
-  /new-deal/lender-view-count/{loanRequestId}/{userId}:
-    patch:
-      summary: Loan View Count Update
-      deprecated: false
-      description: ''
-      tags:
-        - NewDeal
-      parameters:
-        - name: loanRequestId
-          in: path
-          description: ''
-          required: true
-          example: 689c66e4a95b7c02325e99f2
-          schema:
-            type: string
-        - name: userId
-          in: path
-          description: ''
-          required: true
-          example: 683eb91486a309b8f3d80187
+          required: false
+          example: >-
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NjUxOTBkNDhhODQxNzIwYmYwY2NmZiIsInJvbGUiOiJCb3Jyb3dlciIsImlhdCI6MTc1MTk1NDI5NywiZXhwIjoxNzUyNTU5MDk3fQ.iPIbbwUoCwZgC4gQJHNK8C07pxhZ3Pw0IiOINGJsIN4
           schema:
             type: string
       responses:
@@ -1456,7 +1186,7 @@ paths:
         - bearer: []
   /new-deal/get-proposed-debt-interest/{loanRequestId}:
     get:
-      summary: get-proposed-debt-amortization-&-interest-expense
+      summary: s2-get-proposed-debt-amortization-&-interest-expense-run-time
       deprecated: false
       description: ''
       tags:
@@ -1494,9 +1224,322 @@ paths:
           headers: {}
       security:
         - bearer: []
-  /manage-collaborators/invite:
+  /new-deal/update-pdf-data/{loanRequestId}:
+    patch:
+      summary: s2-update-pdf-data
+      deprecated: false
+      description: ''
+      tags:
+        - NewDeal
+      parameters:
+        - name: loanRequestId
+          in: path
+          description: ''
+          required: true
+          example: 6870d85a2105083752abb2ff
+          schema:
+            type: string
+        - name: refreshToken
+          in: header
+          description: ''
+          required: false
+          example: >-
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NjUxOTBkNDhhODQxNzIwYmYwY2NmZiIsInJvbGUiOiJCb3Jyb3dlciIsImlhdCI6MTc1MTk1NDI5NywiZXhwIjoxNzUyNTU5MDk3fQ.iPIbbwUoCwZgC4gQJHNK8C07pxhZ3Pw0IiOINGJsIN4
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties: {}
+            example:
+              loanType: Working Capital
+              loanAmount: 500000
+              additionalInfo: hiiiii
+              loanDocuments:
+                - documentId: 6870a7bd2105083752aba47d
+                  parsedValueId: 6870a7dabfc3577fde3e954b
+                  parsedRatiosMapped:
+                    - name: year
+                      displayName: Year
+                      value: 2023
+                      formula: null
+                      evaluated: null
+                      result: 2023
+                    - name: netProfit
+                      displayName: Net Profit
+                      value: null
+                      formula: '{Schedule_M1_Line_1}'
+                      evaluated: '-61426'
+                      result: -61426
+                    - name: ebitda
+                      displayName: EBITDA
+                      value: null
+                      formula: ({Schedule_M1_Line_1} + {Line_13} + {Line_14})
+                      evaluated: (-61426 + 165403 + 14761)
+                      result: 119738
+                    - name: debtToEquity
+                      displayName: Debt to Equity
+                      value: null
+                      formula: ({totalLiabilities}) / ({netWorth})
+                      evaluated: (100000 / 50000)
+                      result: 2
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: {}
+          headers: {}
+      security:
+        - bearer: []
+  /new-deal/ratio-pdf-data/{loanRequestId}:
+    get:
+      summary: s3-ratio-pdf-data
+      deprecated: false
+      description: ''
+      tags:
+        - NewDeal
+      parameters:
+        - name: loanRequestId
+          in: path
+          description: ''
+          required: true
+          example: 687600c8978bcedc3a649aa4
+          schema:
+            type: string
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: {}
+          headers: {}
+      security:
+        - bearer: []
+  /new-deal/loan-request-submit/{loanRequestId}:
     post:
-      summary: MC-Invite -POST
+      summary: s3-loan-request-submit-3
+      deprecated: false
+      description: ''
+      tags:
+        - NewDeal
+      parameters:
+        - name: loanRequestId
+          in: path
+          description: ''
+          required: true
+          example: 68762ce258d2102daa488598
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties: {}
+              required:
+                - 01K08T8PV33FM50EGYCM5TPPTH
+            example:
+              status: SUBMITTED
+              updatedBy: 68412a81eafa464c9f44c3fc
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: {}
+          headers: {}
+      security:
+        - bearer: []
+  /new-deal/drafts/{userId}:
+    get:
+      summary: borrower-deals-drafts-by-borrower-userId
+      deprecated: false
+      description: ''
+      tags:
+        - NewDeal
+      parameters:
+        - name: userId
+          in: path
+          description: ''
+          required: true
+          example: 68412a81eafa464c9f44c3fc
+          schema:
+            type: string
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: {}
+          headers: {}
+      security:
+        - bearer: []
+  /new-deal/get-all-loan/{userId}:
+    get:
+      summary: my-loan-request-get-all-loan
+      deprecated: false
+      description: ''
+      tags:
+        - NewDeal
+      parameters:
+        - name: userId
+          in: path
+          description: ''
+          required: true
+          schema:
+            type: string
+        - name: from
+          in: query
+          description: ''
+          required: false
+          example: '2025-07-07'
+          schema:
+            type: string
+        - name: to
+          in: query
+          description: ''
+          required: false
+          example: '2025-07-09'
+          schema:
+            type: string
+        - name: status
+          in: query
+          description: ''
+          required: false
+          example: DRAFT
+          schema:
+            type: string
+        - name: page
+          in: query
+          description: ''
+          required: false
+          example: 1
+          schema:
+            type: number
+        - name: pageSize
+          in: query
+          description: ''
+          required: false
+          example: 10
+          schema:
+            type: number
+        - name: refreshToken
+          in: header
+          description: ''
+          required: false
+          example: >-
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NjUxOTBkNDhhODQxNzIwYmYwY2NmZiIsInJvbGUiOiJCb3Jyb3dlciIsImlhdCI6MTc1MTk1NDI5NywiZXhwIjoxNzUyNTU5MDk3fQ.iPIbbwUoCwZgC4gQJHNK8C07pxhZ3Pw0IiOINGJsIN4
+          schema:
+            type: string
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: {}
+          headers: {}
+      security:
+        - bearer: []
+  /new-deal/loan-request/{loanRequestId}/{userId}:
+    patch:
+      summary: bor-delete-loan-request
+      deprecated: false
+      description: ''
+      tags:
+        - NewDeal
+      parameters:
+        - name: loanRequestId
+          in: path
+          description: ''
+          required: true
+          example: 687e222cbdfe1de00e5ee43c
+          schema:
+            type: string
+        - name: userId
+          in: path
+          description: ''
+          required: true
+          example: 683eb91486a309b8f3d80187
+          schema:
+            type: string
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: {}
+          headers: {}
+      security:
+        - bearer: []
+  /new-deal/lender-view-count/{loanRequestId}/{userId}:
+    patch:
+      summary: lender-loan-view-count-update
+      deprecated: false
+      description: ''
+      tags:
+        - NewDeal
+      parameters:
+        - name: loanRequestId
+          in: path
+          description: ''
+          required: true
+          example: 689c66e4a95b7c02325e99f2
+          schema:
+            type: string
+        - name: userId
+          in: path
+          description: ''
+          required: true
+          example: 683eb91486a309b8f3d80187
+          schema:
+            type: string
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: {}
+          headers: {}
+      security:
+        - bearer: []
+  /manage-collaborators/invite:
+    get:
+      summary: mc-Invite-get-All
+      deprecated: false
+      description: ''
+      tags:
+        - ManageCollaborator
+      parameters: []
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: {}
+          headers: {}
+      security:
+        - bearer: []
+    post:
+      summary: mc-Invite-post
       deprecated: false
       description: ''
       tags:
@@ -1566,27 +1609,9 @@ paths:
           headers: {}
       security:
         - bearer: []
-    get:
-      summary: MC-Invite-GET-All
-      deprecated: false
-      description: ''
-      tags:
-        - ManageCollaborator
-      parameters: []
-      responses:
-        '200':
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                properties: {}
-          headers: {}
-      security:
-        - bearer: []
   /manage-collaborators/invite/{userId}:
     patch:
-      summary: MC-Invite-PATCH
+      summary: mc-invite-patch
       deprecated: false
       description: ''
       tags:
@@ -1647,7 +1672,7 @@ paths:
       security:
         - bearer: []
     get:
-      summary: MC-Invite-GET-Id
+      summary: mc-invite-get-id
       deprecated: false
       description: ''
       tags:
@@ -1673,7 +1698,7 @@ paths:
         - bearer: []
   /manage-collaborators/invitation-resend/{userId}:
     post:
-      summary: MC-Invite-Resend
+      summary: mc-invite-resend
       deprecated: false
       description: ''
       tags:
@@ -1699,7 +1724,7 @@ paths:
         - bearer: []
   /manage-collaborators/invitation-revoke/{userId}:
     post:
-      summary: MC-Invite-Revoke
+      summary: mc-invite-revoke
       deprecated: false
       description: ''
       tags:
@@ -2856,7 +2881,7 @@ paths:
         - bearer: []
   /banker/{id}:
     patch:
-      summary: update banker
+      summary: update-lender
       deprecated: false
       description: ''
       tags:
@@ -2899,7 +2924,7 @@ paths:
       security:
         - bearer: []
     get:
-      summary: get banker
+      summary: get-lender
       deprecated: false
       description: ''
       tags:
@@ -2922,9 +2947,41 @@ paths:
           headers: {}
       security:
         - bearer: []
+  /docu-sign/start:
+    post:
+      summary: start-docusign
+      deprecated: false
+      description: ''
+      tags:
+        - Docusign
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties: {}
+            example:
+              userId: 68cbc9af0eb3fe2643b3bad7
+              firstName: Denton
+              middleInitial: Tara Fuller
+              lastName: Kent
+              email: jumeqob@mailinator.com
+              currentDate: '2025-09-18'
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: {}
+          headers: {}
+      security:
+        - bearer: []
   /borrower/{id}:
     get:
-      summary: get borrower
+      summary: get-borrower
       deprecated: false
       description: ''
       tags:
@@ -2948,7 +3005,7 @@ paths:
       security:
         - bearer: []
     patch:
-      summary: update borrower
+      summary: update-borrower
       deprecated: false
       description: ''
       tags:
@@ -2986,7 +3043,7 @@ paths:
         - bearer: []
   /footer/get-cnbc-news:
     get:
-      summary: get CNBC news
+      summary: get-cnbc-news
       deprecated: false
       description: ''
       tags:
@@ -3030,47 +3087,9 @@ paths:
           headers: {}
       security:
         - bearer: []
-  /ai/chatbot/categoriesQueAns:
-    get:
-      summary: categoriesQueAns
-      deprecated: false
-      description: ''
-      tags:
-        - LearnMoreAi
-      parameters: []
-      responses:
-        '200':
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                properties: {}
-          headers: {}
-      security:
-        - bearer: []
-  /user/profile/68c8ee67c6b1b6c2488acef8:
-    patch:
-      summary: delete-borrower-collaborator
-      deprecated: false
-      description: ''
-      tags:
-        - Profile
-      parameters: []
-      responses:
-        '200':
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                properties: {}
-          headers: {}
-      security:
-        - bearer: []
   /user/profile/{id}:
     get:
-      summary: get profile by id
+      summary: get-profile-by-id
       deprecated: false
       description: ''
       tags:
@@ -3095,7 +3114,7 @@ paths:
         - bearer: []
   /user/profile/{type}/{id}:
     patch:
-      summary: update profile by id
+      summary: update-profile-by-id
       deprecated: false
       description: ''
       tags:
@@ -3126,27 +3145,14 @@ paths:
           headers: {}
       security:
         - bearer: []
-  /docu-sign/start:
-    post:
-      summary: Untitled Endpoint
+  /user/profile/68c8ee67c6b1b6c2488acef8:
+    patch:
+      summary: delete-borrower-collaborator
       deprecated: false
       description: ''
       tags:
-        - Docusign
+        - Profile
       parameters: []
-      requestBody:
-        content:
-          application/json:
-            schema:
-              type: object
-              properties: {}
-            example:
-              userId: 68cbc9af0eb3fe2643b3bad7
-              firstName: Denton
-              middleInitial: Tara Fuller
-              lastName: Kent
-              email: jumeqob@mailinator.com
-              currentDate: '2025-09-18'
       responses:
         '200':
           description: ''
