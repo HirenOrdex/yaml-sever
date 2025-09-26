@@ -4737,6 +4737,10 @@ components:
     bearer:
       type: http
       scheme: bearer
+    RefreshTokenAuth:
+      type: apiKey
+      in: header
+      name: refreshToken
 servers:
   - url: https://dev.aloanmatic.com/api/
     description: Develop Env
