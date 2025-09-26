@@ -8,13 +8,42 @@
 <body>
   <div id="swagger-ui"></div>
   <script src="https://unpkg.com/swagger-ui-dist/swagger-ui-bundle.js"></script>
-  <script>
-    window.onload = () => {
-      SwaggerUIBundle({
-        url: "Aloanmatic.openapi.yaml", // 👈 Path to your YAML
-        dom_id: "#swagger-ui",
-      });
-    };
-  </script>
-</body>
+  <!DOCTYPE html>
+<html>
+  <head>
+    <title>Aloanmatic Swagger</title>
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/swagger-ui-dist/swagger-ui.css" />
+  </head>
+  <body>
+    <div id="swagger-ui"></div>
+    <script src="https://unpkg.com/swagger-ui-dist/swagger-ui-bundle.js"></script>
+    <script>
+      let accessToken = null;
+      let refreshToken = null;
+
+      window.onload = () => {
+        SwaggerUIBundle({
+          url: "Aloanmatic.openapi.yaml",
+          dom_id: "#swagger-ui",
+          requestInterceptor: (req) => {
+            if (accessToken) req.headers["Authorization"] = `Bearer ${accessToken}`;
+            if (refreshToken) req.headers["refreshtoken"] = refreshToken;
+            return req;
+          },
+          responseInterceptor: (res) => {
+            try {
+              if (res.url.includes("/auth/verify-otp") && res.text) {
+                const body = JSON.parse(res.text);
+                if (body?.data?.user?.accessToken) accessToken = body.data.user.accessToken;
+                if (body?.data?.user?.refreshToken) refreshToken = body.data.user.refreshToken;
+              }
+            } catch (err) {
+              console.error("Interceptor parse error:", err);
+            }
+            return res;
+          },
+        });
+      };
+    </script>
+  </body>
 </html>

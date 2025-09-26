@@ -1,4 +1,4 @@
-openapi: 3.0.1
+openapi: 3.1.0
 info:
   title: Aloanmatic
   description: ''
@@ -27,13 +27,26 @@ paths:
       tags:
         - Auth
       parameters:
-        - name: Content-Type
+        - name: authorization
           in: header
           description: ''
-          required: true
-          example: application/json
+          example: >-
+            Bearer
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1ODYwNTQ3MX0.h50lFaE8o5S7VHKTavjHrtxM1YV-_JP0Pj0irsmvPAs
           schema:
             type: string
+            default: >-
+              Bearer
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1ODYwNTQ3MX0.h50lFaE8o5S7VHKTavjHrtxM1YV-_JP0Pj0irsmvPAs
+        - name: refreshtoken
+          in: header
+          description: ''
+          example: >-
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1OTEyMzg3MX0.jUJtDJ6WlDPDNfoZKiXrnBWxHYWkHFNCBkSs84dRM-0
+          schema:
+            type: string
+            default: >-
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1OTEyMzg3MX0.jUJtDJ6WlDPDNfoZKiXrnBWxHYWkHFNCBkSs84dRM-0
       requestBody:
         content:
           application/json:
@@ -69,13 +82,26 @@ paths:
       tags:
         - Auth
       parameters:
-        - name: Content-Type
+        - name: authorization
           in: header
           description: ''
-          required: true
-          example: application/json
+          example: >-
+            Bearer
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1ODYwNTQ3MX0.h50lFaE8o5S7VHKTavjHrtxM1YV-_JP0Pj0irsmvPAs
           schema:
             type: string
+            default: >-
+              Bearer
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1ODYwNTQ3MX0.h50lFaE8o5S7VHKTavjHrtxM1YV-_JP0Pj0irsmvPAs
+        - name: refreshtoken
+          in: header
+          description: ''
+          example: >-
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1OTEyMzg3MX0.jUJtDJ6WlDPDNfoZKiXrnBWxHYWkHFNCBkSs84dRM-0
+          schema:
+            type: string
+            default: >-
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1OTEyMzg3MX0.jUJtDJ6WlDPDNfoZKiXrnBWxHYWkHFNCBkSs84dRM-0
       requestBody:
         content:
           application/json:
@@ -107,13 +133,26 @@ paths:
       tags:
         - Auth
       parameters:
-        - name: Content-Type
+        - name: authorization
           in: header
           description: ''
-          required: true
-          example: application/json
+          example: >-
+            Bearer
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1ODYwNTQ3MX0.h50lFaE8o5S7VHKTavjHrtxM1YV-_JP0Pj0irsmvPAs
           schema:
             type: string
+            default: >-
+              Bearer
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1ODYwNTQ3MX0.h50lFaE8o5S7VHKTavjHrtxM1YV-_JP0Pj0irsmvPAs
+        - name: refreshtoken
+          in: header
+          description: ''
+          example: >-
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1OTEyMzg3MX0.jUJtDJ6WlDPDNfoZKiXrnBWxHYWkHFNCBkSs84dRM-0
+          schema:
+            type: string
+            default: >-
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1OTEyMzg3MX0.jUJtDJ6WlDPDNfoZKiXrnBWxHYWkHFNCBkSs84dRM-0
       requestBody:
         content:
           application/json:
@@ -149,15 +188,26 @@ paths:
       tags:
         - Auth
       parameters:
-        - name: Authorization
+        - name: authorization
           in: header
           description: ''
-          required: true
           example: >-
             Bearer
-            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ZjRhOTMwMzVjMTQ3Njg2NTNkZmM4ZCIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzQ0MDg3MzQ0LCJleHAiOjE3NDQxNzM3NDR9.kbOG2os4LYH0yt2CYYEihmBaaFjgOql9SZGSBwMdiuY
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1ODYwNTQ3MX0.h50lFaE8o5S7VHKTavjHrtxM1YV-_JP0Pj0irsmvPAs
           schema:
             type: string
+            default: >-
+              Bearer
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1ODYwNTQ3MX0.h50lFaE8o5S7VHKTavjHrtxM1YV-_JP0Pj0irsmvPAs
+        - name: refreshtoken
+          in: header
+          description: ''
+          example: >-
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1OTEyMzg3MX0.jUJtDJ6WlDPDNfoZKiXrnBWxHYWkHFNCBkSs84dRM-0
+          schema:
+            type: string
+            default: >-
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1OTEyMzg3MX0.jUJtDJ6WlDPDNfoZKiXrnBWxHYWkHFNCBkSs84dRM-0
       responses:
         '200':
           description: ''
@@ -184,6 +234,26 @@ paths:
           example: banker
           schema:
             type: string
+        - name: authorization
+          in: header
+          description: ''
+          example: >-
+            Bearer
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1ODYwNTQ3MX0.h50lFaE8o5S7VHKTavjHrtxM1YV-_JP0Pj0irsmvPAs
+          schema:
+            type: string
+            default: >-
+              Bearer
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1ODYwNTQ3MX0.h50lFaE8o5S7VHKTavjHrtxM1YV-_JP0Pj0irsmvPAs
+        - name: refreshtoken
+          in: header
+          description: ''
+          example: >-
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1OTEyMzg3MX0.jUJtDJ6WlDPDNfoZKiXrnBWxHYWkHFNCBkSs84dRM-0
+          schema:
+            type: string
+            default: >-
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1OTEyMzg3MX0.jUJtDJ6WlDPDNfoZKiXrnBWxHYWkHFNCBkSs84dRM-0
       requestBody:
         content:
           multipart/form-data:
@@ -224,13 +294,26 @@ paths:
       tags:
         - Auth
       parameters:
-        - name: Content-Type
+        - name: authorization
           in: header
           description: ''
-          required: true
-          example: application/json
+          example: >-
+            Bearer
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1ODYwNTQ3MX0.h50lFaE8o5S7VHKTavjHrtxM1YV-_JP0Pj0irsmvPAs
           schema:
             type: string
+            default: >-
+              Bearer
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1ODYwNTQ3MX0.h50lFaE8o5S7VHKTavjHrtxM1YV-_JP0Pj0irsmvPAs
+        - name: refreshtoken
+          in: header
+          description: ''
+          example: >-
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1OTEyMzg3MX0.jUJtDJ6WlDPDNfoZKiXrnBWxHYWkHFNCBkSs84dRM-0
+          schema:
+            type: string
+            default: >-
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1OTEyMzg3MX0.jUJtDJ6WlDPDNfoZKiXrnBWxHYWkHFNCBkSs84dRM-0
       requestBody:
         content:
           application/json:
@@ -275,6 +358,26 @@ paths:
           example: a91c2a6a350c2508d2c52120e60052122888d1e61cebf74ae1162fa84481bdb9
           schema:
             type: string
+        - name: authorization
+          in: header
+          description: ''
+          example: >-
+            Bearer
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1ODYwNTQ3MX0.h50lFaE8o5S7VHKTavjHrtxM1YV-_JP0Pj0irsmvPAs
+          schema:
+            type: string
+            default: >-
+              Bearer
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1ODYwNTQ3MX0.h50lFaE8o5S7VHKTavjHrtxM1YV-_JP0Pj0irsmvPAs
+        - name: refreshtoken
+          in: header
+          description: ''
+          example: >-
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1OTEyMzg3MX0.jUJtDJ6WlDPDNfoZKiXrnBWxHYWkHFNCBkSs84dRM-0
+          schema:
+            type: string
+            default: >-
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1OTEyMzg3MX0.jUJtDJ6WlDPDNfoZKiXrnBWxHYWkHFNCBkSs84dRM-0
       responses:
         '200':
           description: ''
@@ -294,13 +397,26 @@ paths:
       tags:
         - Auth
       parameters:
-        - name: Content-Type
+        - name: authorization
           in: header
           description: ''
-          required: true
-          example: application/json
+          example: >-
+            Bearer
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1ODYwNTQ3MX0.h50lFaE8o5S7VHKTavjHrtxM1YV-_JP0Pj0irsmvPAs
           schema:
             type: string
+            default: >-
+              Bearer
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1ODYwNTQ3MX0.h50lFaE8o5S7VHKTavjHrtxM1YV-_JP0Pj0irsmvPAs
+        - name: refreshtoken
+          in: header
+          description: ''
+          example: >-
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1OTEyMzg3MX0.jUJtDJ6WlDPDNfoZKiXrnBWxHYWkHFNCBkSs84dRM-0
+          schema:
+            type: string
+            default: >-
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1OTEyMzg3MX0.jUJtDJ6WlDPDNfoZKiXrnBWxHYWkHFNCBkSs84dRM-0
       requestBody:
         content:
           application/json:
@@ -335,13 +451,26 @@ paths:
       tags:
         - Auth
       parameters:
-        - name: Content-Type
+        - name: authorization
           in: header
           description: ''
-          required: true
-          example: application/json
+          example: >-
+            Bearer
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1ODYwNTQ3MX0.h50lFaE8o5S7VHKTavjHrtxM1YV-_JP0Pj0irsmvPAs
           schema:
             type: string
+            default: >-
+              Bearer
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1ODYwNTQ3MX0.h50lFaE8o5S7VHKTavjHrtxM1YV-_JP0Pj0irsmvPAs
+        - name: refreshtoken
+          in: header
+          description: ''
+          example: >-
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1OTEyMzg3MX0.jUJtDJ6WlDPDNfoZKiXrnBWxHYWkHFNCBkSs84dRM-0
+          schema:
+            type: string
+            default: >-
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1OTEyMzg3MX0.jUJtDJ6WlDPDNfoZKiXrnBWxHYWkHFNCBkSs84dRM-0
       requestBody:
         content:
           application/json:
@@ -377,13 +506,26 @@ paths:
       tags:
         - Auth
       parameters:
-        - name: Content-Type
+        - name: authorization
           in: header
           description: ''
-          required: true
-          example: application/json
+          example: >-
+            Bearer
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1ODYwNTQ3MX0.h50lFaE8o5S7VHKTavjHrtxM1YV-_JP0Pj0irsmvPAs
           schema:
             type: string
+            default: >-
+              Bearer
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1ODYwNTQ3MX0.h50lFaE8o5S7VHKTavjHrtxM1YV-_JP0Pj0irsmvPAs
+        - name: refreshtoken
+          in: header
+          description: ''
+          example: >-
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1OTEyMzg3MX0.jUJtDJ6WlDPDNfoZKiXrnBWxHYWkHFNCBkSs84dRM-0
+          schema:
+            type: string
+            default: >-
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1OTEyMzg3MX0.jUJtDJ6WlDPDNfoZKiXrnBWxHYWkHFNCBkSs84dRM-0
       requestBody:
         content:
           application/json:
@@ -415,13 +557,26 @@ paths:
       tags:
         - Auth
       parameters:
-        - name: Content-Type
+        - name: authorization
           in: header
           description: ''
-          required: true
-          example: application/json
+          example: >-
+            Bearer
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1ODYwNTQ3MX0.h50lFaE8o5S7VHKTavjHrtxM1YV-_JP0Pj0irsmvPAs
           schema:
             type: string
+            default: >-
+              Bearer
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1ODYwNTQ3MX0.h50lFaE8o5S7VHKTavjHrtxM1YV-_JP0Pj0irsmvPAs
+        - name: refreshtoken
+          in: header
+          description: ''
+          example: >-
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1OTEyMzg3MX0.jUJtDJ6WlDPDNfoZKiXrnBWxHYWkHFNCBkSs84dRM-0
+          schema:
+            type: string
+            default: >-
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1OTEyMzg3MX0.jUJtDJ6WlDPDNfoZKiXrnBWxHYWkHFNCBkSs84dRM-0
       requestBody:
         content:
           application/json:
@@ -457,13 +612,26 @@ paths:
       tags:
         - Auth
       parameters:
-        - name: Content-Type
+        - name: authorization
           in: header
           description: ''
-          required: true
-          example: application/json
+          example: >-
+            Bearer
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1ODYwNTQ3MX0.h50lFaE8o5S7VHKTavjHrtxM1YV-_JP0Pj0irsmvPAs
           schema:
             type: string
+            default: >-
+              Bearer
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1ODYwNTQ3MX0.h50lFaE8o5S7VHKTavjHrtxM1YV-_JP0Pj0irsmvPAs
+        - name: refreshtoken
+          in: header
+          description: ''
+          example: >-
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1OTEyMzg3MX0.jUJtDJ6WlDPDNfoZKiXrnBWxHYWkHFNCBkSs84dRM-0
+          schema:
+            type: string
+            default: >-
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1OTEyMzg3MX0.jUJtDJ6WlDPDNfoZKiXrnBWxHYWkHFNCBkSs84dRM-0
       requestBody:
         content:
           application/json:
@@ -490,8 +658,7 @@ paths:
                 type: object
                 properties: {}
           headers: {}
-      security:
-        - bearer: []
+      security: []
   /auth/user-status/{userId}:
     get:
       summary: user-status
@@ -506,13 +673,26 @@ paths:
           required: true
           schema:
             type: string
-        - name: Content-Type
+        - name: authorization
           in: header
           description: ''
-          required: true
-          example: application/json
+          example: >-
+            Bearer
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1ODYwNTQ3MX0.h50lFaE8o5S7VHKTavjHrtxM1YV-_JP0Pj0irsmvPAs
           schema:
             type: string
+            default: >-
+              Bearer
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1ODYwNTQ3MX0.h50lFaE8o5S7VHKTavjHrtxM1YV-_JP0Pj0irsmvPAs
+        - name: refreshtoken
+          in: header
+          description: ''
+          example: >-
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1OTEyMzg3MX0.jUJtDJ6WlDPDNfoZKiXrnBWxHYWkHFNCBkSs84dRM-0
+          schema:
+            type: string
+            default: >-
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1OTEyMzg3MX0.jUJtDJ6WlDPDNfoZKiXrnBWxHYWkHFNCBkSs84dRM-0
       responses:
         '200':
           description: ''
@@ -532,13 +712,26 @@ paths:
       tags:
         - Auth
       parameters:
-        - name: Content-Type
+        - name: authorization
           in: header
           description: ''
-          required: true
-          example: application/json
+          example: >-
+            Bearer
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1ODYwNTQ3MX0.h50lFaE8o5S7VHKTavjHrtxM1YV-_JP0Pj0irsmvPAs
           schema:
             type: string
+            default: >-
+              Bearer
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1ODYwNTQ3MX0.h50lFaE8o5S7VHKTavjHrtxM1YV-_JP0Pj0irsmvPAs
+        - name: refreshtoken
+          in: header
+          description: ''
+          example: >-
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1OTEyMzg3MX0.jUJtDJ6WlDPDNfoZKiXrnBWxHYWkHFNCBkSs84dRM-0
+          schema:
+            type: string
+            default: >-
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1OTEyMzg3MX0.jUJtDJ6WlDPDNfoZKiXrnBWxHYWkHFNCBkSs84dRM-0
       requestBody:
         content:
           application/json:
@@ -593,13 +786,26 @@ paths:
       tags:
         - Auth
       parameters:
-        - name: Content-Type
+        - name: authorization
           in: header
           description: ''
-          required: true
-          example: application/json
+          example: >-
+            Bearer
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1ODYwNTQ3MX0.h50lFaE8o5S7VHKTavjHrtxM1YV-_JP0Pj0irsmvPAs
           schema:
             type: string
+            default: >-
+              Bearer
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1ODYwNTQ3MX0.h50lFaE8o5S7VHKTavjHrtxM1YV-_JP0Pj0irsmvPAs
+        - name: refreshtoken
+          in: header
+          description: ''
+          example: >-
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1OTEyMzg3MX0.jUJtDJ6WlDPDNfoZKiXrnBWxHYWkHFNCBkSs84dRM-0
+          schema:
+            type: string
+            default: >-
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1OTEyMzg3MX0.jUJtDJ6WlDPDNfoZKiXrnBWxHYWkHFNCBkSs84dRM-0
       requestBody:
         content:
           application/json:
@@ -641,6 +847,26 @@ paths:
           example: google
           schema:
             type: string
+        - name: authorization
+          in: header
+          description: ''
+          example: >-
+            Bearer
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1ODYwNTQ3MX0.h50lFaE8o5S7VHKTavjHrtxM1YV-_JP0Pj0irsmvPAs
+          schema:
+            type: string
+            default: >-
+              Bearer
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1ODYwNTQ3MX0.h50lFaE8o5S7VHKTavjHrtxM1YV-_JP0Pj0irsmvPAs
+        - name: refreshtoken
+          in: header
+          description: ''
+          example: >-
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1OTEyMzg3MX0.jUJtDJ6WlDPDNfoZKiXrnBWxHYWkHFNCBkSs84dRM-0
+          schema:
+            type: string
+            default: >-
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1OTEyMzg3MX0.jUJtDJ6WlDPDNfoZKiXrnBWxHYWkHFNCBkSs84dRM-0
       responses:
         '200':
           description: ''
@@ -667,6 +893,26 @@ paths:
           example: google
           schema:
             type: string
+        - name: authorization
+          in: header
+          description: ''
+          example: >-
+            Bearer
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1ODYwNTQ3MX0.h50lFaE8o5S7VHKTavjHrtxM1YV-_JP0Pj0irsmvPAs
+          schema:
+            type: string
+            default: >-
+              Bearer
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1ODYwNTQ3MX0.h50lFaE8o5S7VHKTavjHrtxM1YV-_JP0Pj0irsmvPAs
+        - name: refreshtoken
+          in: header
+          description: ''
+          example: >-
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1OTEyMzg3MX0.jUJtDJ6WlDPDNfoZKiXrnBWxHYWkHFNCBkSs84dRM-0
+          schema:
+            type: string
+            default: >-
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1OTEyMzg3MX0.jUJtDJ6WlDPDNfoZKiXrnBWxHYWkHFNCBkSs84dRM-0
       responses:
         '200':
           description: ''
@@ -693,6 +939,26 @@ paths:
           example: google
           schema:
             type: string
+        - name: authorization
+          in: header
+          description: ''
+          example: >-
+            Bearer
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1ODYwNTQ3MX0.h50lFaE8o5S7VHKTavjHrtxM1YV-_JP0Pj0irsmvPAs
+          schema:
+            type: string
+            default: >-
+              Bearer
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1ODYwNTQ3MX0.h50lFaE8o5S7VHKTavjHrtxM1YV-_JP0Pj0irsmvPAs
+        - name: refreshtoken
+          in: header
+          description: ''
+          example: >-
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1OTEyMzg3MX0.jUJtDJ6WlDPDNfoZKiXrnBWxHYWkHFNCBkSs84dRM-0
+          schema:
+            type: string
+            default: >-
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1OTEyMzg3MX0.jUJtDJ6WlDPDNfoZKiXrnBWxHYWkHFNCBkSs84dRM-0
       responses:
         '200':
           description: ''
@@ -726,6 +992,26 @@ paths:
           example: test12345
           schema:
             type: string
+        - name: authorization
+          in: header
+          description: ''
+          example: >-
+            Bearer
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1ODYwNTQ3MX0.h50lFaE8o5S7VHKTavjHrtxM1YV-_JP0Pj0irsmvPAs
+          schema:
+            type: string
+            default: >-
+              Bearer
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1ODYwNTQ3MX0.h50lFaE8o5S7VHKTavjHrtxM1YV-_JP0Pj0irsmvPAs
+        - name: refreshtoken
+          in: header
+          description: ''
+          example: >-
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1OTEyMzg3MX0.jUJtDJ6WlDPDNfoZKiXrnBWxHYWkHFNCBkSs84dRM-0
+          schema:
+            type: string
+            default: >-
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1OTEyMzg3MX0.jUJtDJ6WlDPDNfoZKiXrnBWxHYWkHFNCBkSs84dRM-0
       responses:
         '200':
           description: ''
@@ -744,7 +1030,27 @@ paths:
       description: ''
       tags:
         - LearnMoreAi
-      parameters: []
+      parameters:
+        - name: authorization
+          in: header
+          description: ''
+          example: >-
+            Bearer
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1ODYwNTQ3MX0.h50lFaE8o5S7VHKTavjHrtxM1YV-_JP0Pj0irsmvPAs
+          schema:
+            type: string
+            default: >-
+              Bearer
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1ODYwNTQ3MX0.h50lFaE8o5S7VHKTavjHrtxM1YV-_JP0Pj0irsmvPAs
+        - name: refreshtoken
+          in: header
+          description: ''
+          example: >-
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1OTEyMzg3MX0.jUJtDJ6WlDPDNfoZKiXrnBWxHYWkHFNCBkSs84dRM-0
+          schema:
+            type: string
+            default: >-
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1OTEyMzg3MX0.jUJtDJ6WlDPDNfoZKiXrnBWxHYWkHFNCBkSs84dRM-0
       responses:
         '200':
           description: ''
@@ -771,6 +1077,26 @@ paths:
           example: 687e3daa080c7faf073aa4a8
           schema:
             type: string
+        - name: authorization
+          in: header
+          description: ''
+          example: >-
+            Bearer
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1ODYwNTQ3MX0.h50lFaE8o5S7VHKTavjHrtxM1YV-_JP0Pj0irsmvPAs
+          schema:
+            type: string
+            default: >-
+              Bearer
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1ODYwNTQ3MX0.h50lFaE8o5S7VHKTavjHrtxM1YV-_JP0Pj0irsmvPAs
+        - name: refreshtoken
+          in: header
+          description: ''
+          example: >-
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1OTEyMzg3MX0.jUJtDJ6WlDPDNfoZKiXrnBWxHYWkHFNCBkSs84dRM-0
+          schema:
+            type: string
+            default: >-
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1OTEyMzg3MX0.jUJtDJ6WlDPDNfoZKiXrnBWxHYWkHFNCBkSs84dRM-0
       responses:
         '200':
           description: ''
@@ -789,7 +1115,27 @@ paths:
       description: ''
       tags:
         - LearnMoreAi
-      parameters: []
+      parameters:
+        - name: authorization
+          in: header
+          description: ''
+          example: >-
+            Bearer
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1ODYwNTQ3MX0.h50lFaE8o5S7VHKTavjHrtxM1YV-_JP0Pj0irsmvPAs
+          schema:
+            type: string
+            default: >-
+              Bearer
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1ODYwNTQ3MX0.h50lFaE8o5S7VHKTavjHrtxM1YV-_JP0Pj0irsmvPAs
+        - name: refreshtoken
+          in: header
+          description: ''
+          example: >-
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1OTEyMzg3MX0.jUJtDJ6WlDPDNfoZKiXrnBWxHYWkHFNCBkSs84dRM-0
+          schema:
+            type: string
+            default: >-
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1OTEyMzg3MX0.jUJtDJ6WlDPDNfoZKiXrnBWxHYWkHFNCBkSs84dRM-0
       responses:
         '200':
           description: ''
@@ -808,7 +1154,27 @@ paths:
       description: ''
       tags:
         - LearnMoreAi
-      parameters: []
+      parameters:
+        - name: authorization
+          in: header
+          description: ''
+          example: >-
+            Bearer
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1ODYwNTQ3MX0.h50lFaE8o5S7VHKTavjHrtxM1YV-_JP0Pj0irsmvPAs
+          schema:
+            type: string
+            default: >-
+              Bearer
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1ODYwNTQ3MX0.h50lFaE8o5S7VHKTavjHrtxM1YV-_JP0Pj0irsmvPAs
+        - name: refreshtoken
+          in: header
+          description: ''
+          example: >-
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1OTEyMzg3MX0.jUJtDJ6WlDPDNfoZKiXrnBWxHYWkHFNCBkSs84dRM-0
+          schema:
+            type: string
+            default: >-
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1OTEyMzg3MX0.jUJtDJ6WlDPDNfoZKiXrnBWxHYWkHFNCBkSs84dRM-0
       requestBody:
         content:
           application/json:
@@ -843,14 +1209,26 @@ paths:
           example: 683eb91486a309b8f3d80187
           schema:
             type: string
-        - name: refreshToken
+        - name: authorization
           in: header
           description: ''
-          required: false
           example: >-
-            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NjUxOTBkNDhhODQxNzIwYmYwY2NmZiIsInJvbGUiOiJCb3Jyb3dlciIsImlhdCI6MTc1MTk1NDI5NywiZXhwIjoxNzUyNTU5MDk3fQ.iPIbbwUoCwZgC4gQJHNK8C07pxhZ3Pw0IiOINGJsIN4
+            Bearer
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1ODYwNTQ3MX0.h50lFaE8o5S7VHKTavjHrtxM1YV-_JP0Pj0irsmvPAs
           schema:
             type: string
+            default: >-
+              Bearer
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1ODYwNTQ3MX0.h50lFaE8o5S7VHKTavjHrtxM1YV-_JP0Pj0irsmvPAs
+        - name: refreshtoken
+          in: header
+          description: ''
+          example: >-
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1OTEyMzg3MX0.jUJtDJ6WlDPDNfoZKiXrnBWxHYWkHFNCBkSs84dRM-0
+          schema:
+            type: string
+            default: >-
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1OTEyMzg3MX0.jUJtDJ6WlDPDNfoZKiXrnBWxHYWkHFNCBkSs84dRM-0
       responses:
         '200':
           description: ''
@@ -860,8 +1238,7 @@ paths:
                 type: object
                 properties: {}
           headers: {}
-      security:
-        - bearer: []
+      security: []
   /new-deal/new-loan-request:
     post:
       summary: s1-new-loan-request
@@ -869,7 +1246,27 @@ paths:
       description: ''
       tags:
         - NewDeal
-      parameters: []
+      parameters:
+        - name: authorization
+          in: header
+          description: ''
+          example: >-
+            Bearer
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1ODYwNTQ3MX0.h50lFaE8o5S7VHKTavjHrtxM1YV-_JP0Pj0irsmvPAs
+          schema:
+            type: string
+            default: >-
+              Bearer
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1ODYwNTQ3MX0.h50lFaE8o5S7VHKTavjHrtxM1YV-_JP0Pj0irsmvPAs
+        - name: refreshtoken
+          in: header
+          description: ''
+          example: >-
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1OTEyMzg3MX0.jUJtDJ6WlDPDNfoZKiXrnBWxHYWkHFNCBkSs84dRM-0
+          schema:
+            type: string
+            default: >-
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1OTEyMzg3MX0.jUJtDJ6WlDPDNfoZKiXrnBWxHYWkHFNCBkSs84dRM-0
       requestBody:
         content:
           multipart/form-data:
@@ -993,6 +1390,26 @@ paths:
           example: 68762ce258d2102daa488598
           schema:
             type: string
+        - name: authorization
+          in: header
+          description: ''
+          example: >-
+            Bearer
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1ODYwNTQ3MX0.h50lFaE8o5S7VHKTavjHrtxM1YV-_JP0Pj0irsmvPAs
+          schema:
+            type: string
+            default: >-
+              Bearer
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1ODYwNTQ3MX0.h50lFaE8o5S7VHKTavjHrtxM1YV-_JP0Pj0irsmvPAs
+        - name: refreshtoken
+          in: header
+          description: ''
+          example: >-
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1OTEyMzg3MX0.jUJtDJ6WlDPDNfoZKiXrnBWxHYWkHFNCBkSs84dRM-0
+          schema:
+            type: string
+            default: >-
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1OTEyMzg3MX0.jUJtDJ6WlDPDNfoZKiXrnBWxHYWkHFNCBkSs84dRM-0
       responses:
         '200':
           description: ''
@@ -1018,6 +1435,26 @@ paths:
           example: 68762ce258d2102daa488598
           schema:
             type: string
+        - name: authorization
+          in: header
+          description: ''
+          example: >-
+            Bearer
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1ODYwNTQ3MX0.h50lFaE8o5S7VHKTavjHrtxM1YV-_JP0Pj0irsmvPAs
+          schema:
+            type: string
+            default: >-
+              Bearer
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1ODYwNTQ3MX0.h50lFaE8o5S7VHKTavjHrtxM1YV-_JP0Pj0irsmvPAs
+        - name: refreshtoken
+          in: header
+          description: ''
+          example: >-
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1OTEyMzg3MX0.jUJtDJ6WlDPDNfoZKiXrnBWxHYWkHFNCBkSs84dRM-0
+          schema:
+            type: string
+            default: >-
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1OTEyMzg3MX0.jUJtDJ6WlDPDNfoZKiXrnBWxHYWkHFNCBkSs84dRM-0
       requestBody:
         content:
           multipart/form-data:
@@ -1165,14 +1602,26 @@ paths:
           example: 6875f6116a23024bd12a4567
           schema:
             type: string
-        - name: refreshToken
+        - name: authorization
           in: header
           description: ''
-          required: false
           example: >-
-            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NjUxOTBkNDhhODQxNzIwYmYwY2NmZiIsInJvbGUiOiJCb3Jyb3dlciIsImlhdCI6MTc1MTk1NDI5NywiZXhwIjoxNzUyNTU5MDk3fQ.iPIbbwUoCwZgC4gQJHNK8C07pxhZ3Pw0IiOINGJsIN4
+            Bearer
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1ODYwNTQ3MX0.h50lFaE8o5S7VHKTavjHrtxM1YV-_JP0Pj0irsmvPAs
           schema:
             type: string
+            default: >-
+              Bearer
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1ODYwNTQ3MX0.h50lFaE8o5S7VHKTavjHrtxM1YV-_JP0Pj0irsmvPAs
+        - name: refreshtoken
+          in: header
+          description: ''
+          example: >-
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1OTEyMzg3MX0.jUJtDJ6WlDPDNfoZKiXrnBWxHYWkHFNCBkSs84dRM-0
+          schema:
+            type: string
+            default: >-
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1OTEyMzg3MX0.jUJtDJ6WlDPDNfoZKiXrnBWxHYWkHFNCBkSs84dRM-0
       responses:
         '200':
           description: ''
@@ -1182,8 +1631,7 @@ paths:
                 type: object
                 properties: {}
           headers: {}
-      security:
-        - bearer: []
+      security: []
   /new-deal/get-proposed-debt-interest/{loanRequestId}:
     get:
       summary: s2-get-proposed-debt-amortization-&-interest-expense-run-time
@@ -1213,6 +1661,26 @@ paths:
           example: Term Loan
           schema:
             type: string
+        - name: authorization
+          in: header
+          description: ''
+          example: >-
+            Bearer
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1ODYwNTQ3MX0.h50lFaE8o5S7VHKTavjHrtxM1YV-_JP0Pj0irsmvPAs
+          schema:
+            type: string
+            default: >-
+              Bearer
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1ODYwNTQ3MX0.h50lFaE8o5S7VHKTavjHrtxM1YV-_JP0Pj0irsmvPAs
+        - name: refreshtoken
+          in: header
+          description: ''
+          example: >-
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1OTEyMzg3MX0.jUJtDJ6WlDPDNfoZKiXrnBWxHYWkHFNCBkSs84dRM-0
+          schema:
+            type: string
+            default: >-
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1OTEyMzg3MX0.jUJtDJ6WlDPDNfoZKiXrnBWxHYWkHFNCBkSs84dRM-0
       responses:
         '200':
           description: ''
@@ -1239,14 +1707,26 @@ paths:
           example: 6870d85a2105083752abb2ff
           schema:
             type: string
-        - name: refreshToken
+        - name: authorization
           in: header
           description: ''
-          required: false
           example: >-
-            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NjUxOTBkNDhhODQxNzIwYmYwY2NmZiIsInJvbGUiOiJCb3Jyb3dlciIsImlhdCI6MTc1MTk1NDI5NywiZXhwIjoxNzUyNTU5MDk3fQ.iPIbbwUoCwZgC4gQJHNK8C07pxhZ3Pw0IiOINGJsIN4
+            Bearer
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1ODYwNTQ3MX0.h50lFaE8o5S7VHKTavjHrtxM1YV-_JP0Pj0irsmvPAs
           schema:
             type: string
+            default: >-
+              Bearer
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1ODYwNTQ3MX0.h50lFaE8o5S7VHKTavjHrtxM1YV-_JP0Pj0irsmvPAs
+        - name: refreshtoken
+          in: header
+          description: ''
+          example: >-
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1OTEyMzg3MX0.jUJtDJ6WlDPDNfoZKiXrnBWxHYWkHFNCBkSs84dRM-0
+          schema:
+            type: string
+            default: >-
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1OTEyMzg3MX0.jUJtDJ6WlDPDNfoZKiXrnBWxHYWkHFNCBkSs84dRM-0
       requestBody:
         content:
           application/json:
@@ -1294,8 +1774,7 @@ paths:
                 type: object
                 properties: {}
           headers: {}
-      security:
-        - bearer: []
+      security: []
   /new-deal/ratio-pdf-data/{loanRequestId}:
     get:
       summary: s3-ratio-pdf-data
@@ -1311,6 +1790,26 @@ paths:
           example: 687600c8978bcedc3a649aa4
           schema:
             type: string
+        - name: authorization
+          in: header
+          description: ''
+          example: >-
+            Bearer
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1ODYwNTQ3MX0.h50lFaE8o5S7VHKTavjHrtxM1YV-_JP0Pj0irsmvPAs
+          schema:
+            type: string
+            default: >-
+              Bearer
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1ODYwNTQ3MX0.h50lFaE8o5S7VHKTavjHrtxM1YV-_JP0Pj0irsmvPAs
+        - name: refreshtoken
+          in: header
+          description: ''
+          example: >-
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1OTEyMzg3MX0.jUJtDJ6WlDPDNfoZKiXrnBWxHYWkHFNCBkSs84dRM-0
+          schema:
+            type: string
+            default: >-
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1OTEyMzg3MX0.jUJtDJ6WlDPDNfoZKiXrnBWxHYWkHFNCBkSs84dRM-0
       responses:
         '200':
           description: ''
@@ -1337,6 +1836,26 @@ paths:
           example: 68762ce258d2102daa488598
           schema:
             type: string
+        - name: authorization
+          in: header
+          description: ''
+          example: >-
+            Bearer
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1ODYwNTQ3MX0.h50lFaE8o5S7VHKTavjHrtxM1YV-_JP0Pj0irsmvPAs
+          schema:
+            type: string
+            default: >-
+              Bearer
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1ODYwNTQ3MX0.h50lFaE8o5S7VHKTavjHrtxM1YV-_JP0Pj0irsmvPAs
+        - name: refreshtoken
+          in: header
+          description: ''
+          example: >-
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1OTEyMzg3MX0.jUJtDJ6WlDPDNfoZKiXrnBWxHYWkHFNCBkSs84dRM-0
+          schema:
+            type: string
+            default: >-
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1OTEyMzg3MX0.jUJtDJ6WlDPDNfoZKiXrnBWxHYWkHFNCBkSs84dRM-0
       requestBody:
         content:
           application/json:
@@ -1374,6 +1893,26 @@ paths:
           example: 68412a81eafa464c9f44c3fc
           schema:
             type: string
+        - name: authorization
+          in: header
+          description: ''
+          example: >-
+            Bearer
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1ODYwNTQ3MX0.h50lFaE8o5S7VHKTavjHrtxM1YV-_JP0Pj0irsmvPAs
+          schema:
+            type: string
+            default: >-
+              Bearer
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1ODYwNTQ3MX0.h50lFaE8o5S7VHKTavjHrtxM1YV-_JP0Pj0irsmvPAs
+        - name: refreshtoken
+          in: header
+          description: ''
+          example: >-
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1OTEyMzg3MX0.jUJtDJ6WlDPDNfoZKiXrnBWxHYWkHFNCBkSs84dRM-0
+          schema:
+            type: string
+            default: >-
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1OTEyMzg3MX0.jUJtDJ6WlDPDNfoZKiXrnBWxHYWkHFNCBkSs84dRM-0
       responses:
         '200':
           description: ''
@@ -1434,14 +1973,26 @@ paths:
           example: 10
           schema:
             type: number
-        - name: refreshToken
+        - name: authorization
           in: header
           description: ''
-          required: false
           example: >-
-            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NjUxOTBkNDhhODQxNzIwYmYwY2NmZiIsInJvbGUiOiJCb3Jyb3dlciIsImlhdCI6MTc1MTk1NDI5NywiZXhwIjoxNzUyNTU5MDk3fQ.iPIbbwUoCwZgC4gQJHNK8C07pxhZ3Pw0IiOINGJsIN4
+            Bearer
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1ODYwNTQ3MX0.h50lFaE8o5S7VHKTavjHrtxM1YV-_JP0Pj0irsmvPAs
           schema:
             type: string
+            default: >-
+              Bearer
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1ODYwNTQ3MX0.h50lFaE8o5S7VHKTavjHrtxM1YV-_JP0Pj0irsmvPAs
+        - name: refreshtoken
+          in: header
+          description: ''
+          example: >-
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1OTEyMzg3MX0.jUJtDJ6WlDPDNfoZKiXrnBWxHYWkHFNCBkSs84dRM-0
+          schema:
+            type: string
+            default: >-
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1OTEyMzg3MX0.jUJtDJ6WlDPDNfoZKiXrnBWxHYWkHFNCBkSs84dRM-0
       responses:
         '200':
           description: ''
@@ -1451,8 +2002,7 @@ paths:
                 type: object
                 properties: {}
           headers: {}
-      security:
-        - bearer: []
+      security: []
   /new-deal/loan-request/{loanRequestId}/{userId}:
     patch:
       summary: bor-delete-loan-request
@@ -1475,6 +2025,26 @@ paths:
           example: 683eb91486a309b8f3d80187
           schema:
             type: string
+        - name: authorization
+          in: header
+          description: ''
+          example: >-
+            Bearer
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1ODYwNTQ3MX0.h50lFaE8o5S7VHKTavjHrtxM1YV-_JP0Pj0irsmvPAs
+          schema:
+            type: string
+            default: >-
+              Bearer
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1ODYwNTQ3MX0.h50lFaE8o5S7VHKTavjHrtxM1YV-_JP0Pj0irsmvPAs
+        - name: refreshtoken
+          in: header
+          description: ''
+          example: >-
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1OTEyMzg3MX0.jUJtDJ6WlDPDNfoZKiXrnBWxHYWkHFNCBkSs84dRM-0
+          schema:
+            type: string
+            default: >-
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1OTEyMzg3MX0.jUJtDJ6WlDPDNfoZKiXrnBWxHYWkHFNCBkSs84dRM-0
       responses:
         '200':
           description: ''
@@ -1508,6 +2078,26 @@ paths:
           example: 683eb91486a309b8f3d80187
           schema:
             type: string
+        - name: authorization
+          in: header
+          description: ''
+          example: >-
+            Bearer
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1ODYwNTQ3MX0.h50lFaE8o5S7VHKTavjHrtxM1YV-_JP0Pj0irsmvPAs
+          schema:
+            type: string
+            default: >-
+              Bearer
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1ODYwNTQ3MX0.h50lFaE8o5S7VHKTavjHrtxM1YV-_JP0Pj0irsmvPAs
+        - name: refreshtoken
+          in: header
+          description: ''
+          example: >-
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1OTEyMzg3MX0.jUJtDJ6WlDPDNfoZKiXrnBWxHYWkHFNCBkSs84dRM-0
+          schema:
+            type: string
+            default: >-
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1OTEyMzg3MX0.jUJtDJ6WlDPDNfoZKiXrnBWxHYWkHFNCBkSs84dRM-0
       responses:
         '200':
           description: ''
@@ -1526,7 +2116,27 @@ paths:
       description: ''
       tags:
         - ManageCollaborator
-      parameters: []
+      parameters:
+        - name: authorization
+          in: header
+          description: ''
+          example: >-
+            Bearer
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1ODYwNTQ3MX0.h50lFaE8o5S7VHKTavjHrtxM1YV-_JP0Pj0irsmvPAs
+          schema:
+            type: string
+            default: >-
+              Bearer
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1ODYwNTQ3MX0.h50lFaE8o5S7VHKTavjHrtxM1YV-_JP0Pj0irsmvPAs
+        - name: refreshtoken
+          in: header
+          description: ''
+          example: >-
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1OTEyMzg3MX0.jUJtDJ6WlDPDNfoZKiXrnBWxHYWkHFNCBkSs84dRM-0
+          schema:
+            type: string
+            default: >-
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1OTEyMzg3MX0.jUJtDJ6WlDPDNfoZKiXrnBWxHYWkHFNCBkSs84dRM-0
       responses:
         '200':
           description: ''
@@ -1545,13 +2155,26 @@ paths:
       tags:
         - ManageCollaborator
       parameters:
-        - name: Content-Type
+        - name: authorization
           in: header
           description: ''
-          required: true
-          example: application/json
+          example: >-
+            Bearer
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1ODYwNTQ3MX0.h50lFaE8o5S7VHKTavjHrtxM1YV-_JP0Pj0irsmvPAs
           schema:
             type: string
+            default: >-
+              Bearer
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1ODYwNTQ3MX0.h50lFaE8o5S7VHKTavjHrtxM1YV-_JP0Pj0irsmvPAs
+        - name: refreshtoken
+          in: header
+          description: ''
+          example: >-
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1OTEyMzg3MX0.jUJtDJ6WlDPDNfoZKiXrnBWxHYWkHFNCBkSs84dRM-0
+          schema:
+            type: string
+            default: >-
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1OTEyMzg3MX0.jUJtDJ6WlDPDNfoZKiXrnBWxHYWkHFNCBkSs84dRM-0
       requestBody:
         content:
           application/json:
@@ -1624,6 +2247,26 @@ paths:
           example: 68624ff8c024e3e99d27c53d
           schema:
             type: string
+        - name: authorization
+          in: header
+          description: ''
+          example: >-
+            Bearer
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1ODYwNTQ3MX0.h50lFaE8o5S7VHKTavjHrtxM1YV-_JP0Pj0irsmvPAs
+          schema:
+            type: string
+            default: >-
+              Bearer
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1ODYwNTQ3MX0.h50lFaE8o5S7VHKTavjHrtxM1YV-_JP0Pj0irsmvPAs
+        - name: refreshtoken
+          in: header
+          description: ''
+          example: >-
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1OTEyMzg3MX0.jUJtDJ6WlDPDNfoZKiXrnBWxHYWkHFNCBkSs84dRM-0
+          schema:
+            type: string
+            default: >-
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1OTEyMzg3MX0.jUJtDJ6WlDPDNfoZKiXrnBWxHYWkHFNCBkSs84dRM-0
       requestBody:
         content:
           application/json:
@@ -1685,6 +2328,26 @@ paths:
           example: 68624ff8c024e3e99d27c53d
           schema:
             type: string
+        - name: authorization
+          in: header
+          description: ''
+          example: >-
+            Bearer
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1ODYwNTQ3MX0.h50lFaE8o5S7VHKTavjHrtxM1YV-_JP0Pj0irsmvPAs
+          schema:
+            type: string
+            default: >-
+              Bearer
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1ODYwNTQ3MX0.h50lFaE8o5S7VHKTavjHrtxM1YV-_JP0Pj0irsmvPAs
+        - name: refreshtoken
+          in: header
+          description: ''
+          example: >-
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1OTEyMzg3MX0.jUJtDJ6WlDPDNfoZKiXrnBWxHYWkHFNCBkSs84dRM-0
+          schema:
+            type: string
+            default: >-
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1OTEyMzg3MX0.jUJtDJ6WlDPDNfoZKiXrnBWxHYWkHFNCBkSs84dRM-0
       responses:
         '200':
           description: ''
@@ -1711,6 +2374,26 @@ paths:
           example: 68624ff8c024e3e99d27c53d
           schema:
             type: string
+        - name: authorization
+          in: header
+          description: ''
+          example: >-
+            Bearer
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1ODYwNTQ3MX0.h50lFaE8o5S7VHKTavjHrtxM1YV-_JP0Pj0irsmvPAs
+          schema:
+            type: string
+            default: >-
+              Bearer
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1ODYwNTQ3MX0.h50lFaE8o5S7VHKTavjHrtxM1YV-_JP0Pj0irsmvPAs
+        - name: refreshtoken
+          in: header
+          description: ''
+          example: >-
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1OTEyMzg3MX0.jUJtDJ6WlDPDNfoZKiXrnBWxHYWkHFNCBkSs84dRM-0
+          schema:
+            type: string
+            default: >-
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1OTEyMzg3MX0.jUJtDJ6WlDPDNfoZKiXrnBWxHYWkHFNCBkSs84dRM-0
       responses:
         '200':
           description: ''
@@ -1737,6 +2420,26 @@ paths:
           example: 68624ff8c024e3e99d27c53d
           schema:
             type: string
+        - name: authorization
+          in: header
+          description: ''
+          example: >-
+            Bearer
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1ODYwNTQ3MX0.h50lFaE8o5S7VHKTavjHrtxM1YV-_JP0Pj0irsmvPAs
+          schema:
+            type: string
+            default: >-
+              Bearer
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1ODYwNTQ3MX0.h50lFaE8o5S7VHKTavjHrtxM1YV-_JP0Pj0irsmvPAs
+        - name: refreshtoken
+          in: header
+          description: ''
+          example: >-
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1OTEyMzg3MX0.jUJtDJ6WlDPDNfoZKiXrnBWxHYWkHFNCBkSs84dRM-0
+          schema:
+            type: string
+            default: >-
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1OTEyMzg3MX0.jUJtDJ6WlDPDNfoZKiXrnBWxHYWkHFNCBkSs84dRM-0
       responses:
         '200':
           description: ''
@@ -1791,6 +2494,26 @@ paths:
           example: '10'
           schema:
             type: string
+        - name: authorization
+          in: header
+          description: ''
+          example: >-
+            Bearer
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1ODYwNTQ3MX0.h50lFaE8o5S7VHKTavjHrtxM1YV-_JP0Pj0irsmvPAs
+          schema:
+            type: string
+            default: >-
+              Bearer
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1ODYwNTQ3MX0.h50lFaE8o5S7VHKTavjHrtxM1YV-_JP0Pj0irsmvPAs
+        - name: refreshtoken
+          in: header
+          description: ''
+          example: >-
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1OTEyMzg3MX0.jUJtDJ6WlDPDNfoZKiXrnBWxHYWkHFNCBkSs84dRM-0
+          schema:
+            type: string
+            default: >-
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1OTEyMzg3MX0.jUJtDJ6WlDPDNfoZKiXrnBWxHYWkHFNCBkSs84dRM-0
       responses:
         '200':
           description: ''
@@ -1840,6 +2563,26 @@ paths:
           required: false
           schema:
             type: string
+        - name: authorization
+          in: header
+          description: ''
+          example: >-
+            Bearer
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1ODYwNTQ3MX0.h50lFaE8o5S7VHKTavjHrtxM1YV-_JP0Pj0irsmvPAs
+          schema:
+            type: string
+            default: >-
+              Bearer
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1ODYwNTQ3MX0.h50lFaE8o5S7VHKTavjHrtxM1YV-_JP0Pj0irsmvPAs
+        - name: refreshtoken
+          in: header
+          description: ''
+          example: >-
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1OTEyMzg3MX0.jUJtDJ6WlDPDNfoZKiXrnBWxHYWkHFNCBkSs84dRM-0
+          schema:
+            type: string
+            default: >-
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1OTEyMzg3MX0.jUJtDJ6WlDPDNfoZKiXrnBWxHYWkHFNCBkSs84dRM-0
       responses:
         '200':
           description: ''
@@ -1866,6 +2609,26 @@ paths:
           example: 68a7fcc3bf447c182777155b
           schema:
             type: string
+        - name: authorization
+          in: header
+          description: ''
+          example: >-
+            Bearer
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1ODYwNTQ3MX0.h50lFaE8o5S7VHKTavjHrtxM1YV-_JP0Pj0irsmvPAs
+          schema:
+            type: string
+            default: >-
+              Bearer
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1ODYwNTQ3MX0.h50lFaE8o5S7VHKTavjHrtxM1YV-_JP0Pj0irsmvPAs
+        - name: refreshtoken
+          in: header
+          description: ''
+          example: >-
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1OTEyMzg3MX0.jUJtDJ6WlDPDNfoZKiXrnBWxHYWkHFNCBkSs84dRM-0
+          schema:
+            type: string
+            default: >-
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1OTEyMzg3MX0.jUJtDJ6WlDPDNfoZKiXrnBWxHYWkHFNCBkSs84dRM-0
       requestBody:
         content:
           application/json:
@@ -1892,7 +2655,27 @@ paths:
       description: ''
       tags:
         - Admin
-      parameters: []
+      parameters:
+        - name: authorization
+          in: header
+          description: ''
+          example: >-
+            Bearer
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1ODYwNTQ3MX0.h50lFaE8o5S7VHKTavjHrtxM1YV-_JP0Pj0irsmvPAs
+          schema:
+            type: string
+            default: >-
+              Bearer
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1ODYwNTQ3MX0.h50lFaE8o5S7VHKTavjHrtxM1YV-_JP0Pj0irsmvPAs
+        - name: refreshtoken
+          in: header
+          description: ''
+          example: >-
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1OTEyMzg3MX0.jUJtDJ6WlDPDNfoZKiXrnBWxHYWkHFNCBkSs84dRM-0
+          schema:
+            type: string
+            default: >-
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1OTEyMzg3MX0.jUJtDJ6WlDPDNfoZKiXrnBWxHYWkHFNCBkSs84dRM-0
       responses:
         '200':
           description: ''
@@ -1919,6 +2702,26 @@ paths:
           example: 68a7fcc3bf447c182777155b
           schema:
             type: string
+        - name: authorization
+          in: header
+          description: ''
+          example: >-
+            Bearer
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1ODYwNTQ3MX0.h50lFaE8o5S7VHKTavjHrtxM1YV-_JP0Pj0irsmvPAs
+          schema:
+            type: string
+            default: >-
+              Bearer
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1ODYwNTQ3MX0.h50lFaE8o5S7VHKTavjHrtxM1YV-_JP0Pj0irsmvPAs
+        - name: refreshtoken
+          in: header
+          description: ''
+          example: >-
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1OTEyMzg3MX0.jUJtDJ6WlDPDNfoZKiXrnBWxHYWkHFNCBkSs84dRM-0
+          schema:
+            type: string
+            default: >-
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1OTEyMzg3MX0.jUJtDJ6WlDPDNfoZKiXrnBWxHYWkHFNCBkSs84dRM-0
       requestBody:
         content:
           application/json:
@@ -1953,6 +2756,26 @@ paths:
           example: 68a7fcc3bf447c182777155b
           schema:
             type: string
+        - name: authorization
+          in: header
+          description: ''
+          example: >-
+            Bearer
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1ODYwNTQ3MX0.h50lFaE8o5S7VHKTavjHrtxM1YV-_JP0Pj0irsmvPAs
+          schema:
+            type: string
+            default: >-
+              Bearer
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1ODYwNTQ3MX0.h50lFaE8o5S7VHKTavjHrtxM1YV-_JP0Pj0irsmvPAs
+        - name: refreshtoken
+          in: header
+          description: ''
+          example: >-
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1OTEyMzg3MX0.jUJtDJ6WlDPDNfoZKiXrnBWxHYWkHFNCBkSs84dRM-0
+          schema:
+            type: string
+            default: >-
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1OTEyMzg3MX0.jUJtDJ6WlDPDNfoZKiXrnBWxHYWkHFNCBkSs84dRM-0
       responses:
         '200':
           description: ''
@@ -1979,6 +2802,26 @@ paths:
           example: 68a7fcc3bf447c182777155b
           schema:
             type: string
+        - name: authorization
+          in: header
+          description: ''
+          example: >-
+            Bearer
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1ODYwNTQ3MX0.h50lFaE8o5S7VHKTavjHrtxM1YV-_JP0Pj0irsmvPAs
+          schema:
+            type: string
+            default: >-
+              Bearer
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1ODYwNTQ3MX0.h50lFaE8o5S7VHKTavjHrtxM1YV-_JP0Pj0irsmvPAs
+        - name: refreshtoken
+          in: header
+          description: ''
+          example: >-
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1OTEyMzg3MX0.jUJtDJ6WlDPDNfoZKiXrnBWxHYWkHFNCBkSs84dRM-0
+          schema:
+            type: string
+            default: >-
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1OTEyMzg3MX0.jUJtDJ6WlDPDNfoZKiXrnBWxHYWkHFNCBkSs84dRM-0
       requestBody:
         content:
           application/json:
@@ -2032,6 +2875,26 @@ paths:
           required: false
           schema:
             type: string
+        - name: authorization
+          in: header
+          description: ''
+          example: >-
+            Bearer
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1ODYwNTQ3MX0.h50lFaE8o5S7VHKTavjHrtxM1YV-_JP0Pj0irsmvPAs
+          schema:
+            type: string
+            default: >-
+              Bearer
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1ODYwNTQ3MX0.h50lFaE8o5S7VHKTavjHrtxM1YV-_JP0Pj0irsmvPAs
+        - name: refreshtoken
+          in: header
+          description: ''
+          example: >-
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1OTEyMzg3MX0.jUJtDJ6WlDPDNfoZKiXrnBWxHYWkHFNCBkSs84dRM-0
+          schema:
+            type: string
+            default: >-
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1OTEyMzg3MX0.jUJtDJ6WlDPDNfoZKiXrnBWxHYWkHFNCBkSs84dRM-0
       responses:
         '200':
           description: ''
@@ -2058,6 +2921,26 @@ paths:
           example: 68a7fcc3bf447c182777155b
           schema:
             type: string
+        - name: authorization
+          in: header
+          description: ''
+          example: >-
+            Bearer
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1ODYwNTQ3MX0.h50lFaE8o5S7VHKTavjHrtxM1YV-_JP0Pj0irsmvPAs
+          schema:
+            type: string
+            default: >-
+              Bearer
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1ODYwNTQ3MX0.h50lFaE8o5S7VHKTavjHrtxM1YV-_JP0Pj0irsmvPAs
+        - name: refreshtoken
+          in: header
+          description: ''
+          example: >-
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1OTEyMzg3MX0.jUJtDJ6WlDPDNfoZKiXrnBWxHYWkHFNCBkSs84dRM-0
+          schema:
+            type: string
+            default: >-
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1OTEyMzg3MX0.jUJtDJ6WlDPDNfoZKiXrnBWxHYWkHFNCBkSs84dRM-0
       responses:
         '200':
           description: ''
@@ -2084,6 +2967,26 @@ paths:
           example: 68a7fcc3bf447c182777155b
           schema:
             type: string
+        - name: authorization
+          in: header
+          description: ''
+          example: >-
+            Bearer
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1ODYwNTQ3MX0.h50lFaE8o5S7VHKTavjHrtxM1YV-_JP0Pj0irsmvPAs
+          schema:
+            type: string
+            default: >-
+              Bearer
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1ODYwNTQ3MX0.h50lFaE8o5S7VHKTavjHrtxM1YV-_JP0Pj0irsmvPAs
+        - name: refreshtoken
+          in: header
+          description: ''
+          example: >-
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1OTEyMzg3MX0.jUJtDJ6WlDPDNfoZKiXrnBWxHYWkHFNCBkSs84dRM-0
+          schema:
+            type: string
+            default: >-
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1OTEyMzg3MX0.jUJtDJ6WlDPDNfoZKiXrnBWxHYWkHFNCBkSs84dRM-0
       requestBody:
         content:
           application/json:
@@ -2146,6 +3049,26 @@ paths:
           example: '10'
           schema:
             type: string
+        - name: authorization
+          in: header
+          description: ''
+          example: >-
+            Bearer
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1ODYwNTQ3MX0.h50lFaE8o5S7VHKTavjHrtxM1YV-_JP0Pj0irsmvPAs
+          schema:
+            type: string
+            default: >-
+              Bearer
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1ODYwNTQ3MX0.h50lFaE8o5S7VHKTavjHrtxM1YV-_JP0Pj0irsmvPAs
+        - name: refreshtoken
+          in: header
+          description: ''
+          example: >-
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1OTEyMzg3MX0.jUJtDJ6WlDPDNfoZKiXrnBWxHYWkHFNCBkSs84dRM-0
+          schema:
+            type: string
+            default: >-
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1OTEyMzg3MX0.jUJtDJ6WlDPDNfoZKiXrnBWxHYWkHFNCBkSs84dRM-0
       responses:
         '200':
           description: ''
@@ -2164,7 +3087,27 @@ paths:
       description: ''
       tags:
         - Admin
-      parameters: []
+      parameters:
+        - name: authorization
+          in: header
+          description: ''
+          example: >-
+            Bearer
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1ODYwNTQ3MX0.h50lFaE8o5S7VHKTavjHrtxM1YV-_JP0Pj0irsmvPAs
+          schema:
+            type: string
+            default: >-
+              Bearer
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1ODYwNTQ3MX0.h50lFaE8o5S7VHKTavjHrtxM1YV-_JP0Pj0irsmvPAs
+        - name: refreshtoken
+          in: header
+          description: ''
+          example: >-
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1OTEyMzg3MX0.jUJtDJ6WlDPDNfoZKiXrnBWxHYWkHFNCBkSs84dRM-0
+          schema:
+            type: string
+            default: >-
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1OTEyMzg3MX0.jUJtDJ6WlDPDNfoZKiXrnBWxHYWkHFNCBkSs84dRM-0
       requestBody:
         content:
           application/json:
@@ -2225,6 +3168,26 @@ paths:
           example: '2025-09-18'
           schema:
             type: string
+        - name: authorization
+          in: header
+          description: ''
+          example: >-
+            Bearer
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1ODYwNTQ3MX0.h50lFaE8o5S7VHKTavjHrtxM1YV-_JP0Pj0irsmvPAs
+          schema:
+            type: string
+            default: >-
+              Bearer
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1ODYwNTQ3MX0.h50lFaE8o5S7VHKTavjHrtxM1YV-_JP0Pj0irsmvPAs
+        - name: refreshtoken
+          in: header
+          description: ''
+          example: >-
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1OTEyMzg3MX0.jUJtDJ6WlDPDNfoZKiXrnBWxHYWkHFNCBkSs84dRM-0
+          schema:
+            type: string
+            default: >-
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1OTEyMzg3MX0.jUJtDJ6WlDPDNfoZKiXrnBWxHYWkHFNCBkSs84dRM-0
       responses:
         '200':
           description: ''
@@ -2250,6 +3213,26 @@ paths:
           required: true
           schema:
             type: string
+        - name: authorization
+          in: header
+          description: ''
+          example: >-
+            Bearer
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1ODYwNTQ3MX0.h50lFaE8o5S7VHKTavjHrtxM1YV-_JP0Pj0irsmvPAs
+          schema:
+            type: string
+            default: >-
+              Bearer
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1ODYwNTQ3MX0.h50lFaE8o5S7VHKTavjHrtxM1YV-_JP0Pj0irsmvPAs
+        - name: refreshtoken
+          in: header
+          description: ''
+          example: >-
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1OTEyMzg3MX0.jUJtDJ6WlDPDNfoZKiXrnBWxHYWkHFNCBkSs84dRM-0
+          schema:
+            type: string
+            default: >-
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1OTEyMzg3MX0.jUJtDJ6WlDPDNfoZKiXrnBWxHYWkHFNCBkSs84dRM-0
       requestBody:
         content:
           application/json:
@@ -2276,7 +3259,27 @@ paths:
       description: ''
       tags:
         - Meeting
-      parameters: []
+      parameters:
+        - name: authorization
+          in: header
+          description: ''
+          example: >-
+            Bearer
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1ODYwNTQ3MX0.h50lFaE8o5S7VHKTavjHrtxM1YV-_JP0Pj0irsmvPAs
+          schema:
+            type: string
+            default: >-
+              Bearer
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1ODYwNTQ3MX0.h50lFaE8o5S7VHKTavjHrtxM1YV-_JP0Pj0irsmvPAs
+        - name: refreshtoken
+          in: header
+          description: ''
+          example: >-
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1OTEyMzg3MX0.jUJtDJ6WlDPDNfoZKiXrnBWxHYWkHFNCBkSs84dRM-0
+          schema:
+            type: string
+            default: >-
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1OTEyMzg3MX0.jUJtDJ6WlDPDNfoZKiXrnBWxHYWkHFNCBkSs84dRM-0
       responses:
         '200':
           description: ''
@@ -2309,6 +3312,26 @@ paths:
           required: true
           schema:
             type: string
+        - name: authorization
+          in: header
+          description: ''
+          example: >-
+            Bearer
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1ODYwNTQ3MX0.h50lFaE8o5S7VHKTavjHrtxM1YV-_JP0Pj0irsmvPAs
+          schema:
+            type: string
+            default: >-
+              Bearer
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1ODYwNTQ3MX0.h50lFaE8o5S7VHKTavjHrtxM1YV-_JP0Pj0irsmvPAs
+        - name: refreshtoken
+          in: header
+          description: ''
+          example: >-
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1OTEyMzg3MX0.jUJtDJ6WlDPDNfoZKiXrnBWxHYWkHFNCBkSs84dRM-0
+          schema:
+            type: string
+            default: >-
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1OTEyMzg3MX0.jUJtDJ6WlDPDNfoZKiXrnBWxHYWkHFNCBkSs84dRM-0
       responses:
         '200':
           description: ''
@@ -2341,6 +3364,26 @@ paths:
           example: '88026455394'
           schema:
             type: string
+        - name: authorization
+          in: header
+          description: ''
+          example: >-
+            Bearer
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1ODYwNTQ3MX0.h50lFaE8o5S7VHKTavjHrtxM1YV-_JP0Pj0irsmvPAs
+          schema:
+            type: string
+            default: >-
+              Bearer
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1ODYwNTQ3MX0.h50lFaE8o5S7VHKTavjHrtxM1YV-_JP0Pj0irsmvPAs
+        - name: refreshtoken
+          in: header
+          description: ''
+          example: >-
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1OTEyMzg3MX0.jUJtDJ6WlDPDNfoZKiXrnBWxHYWkHFNCBkSs84dRM-0
+          schema:
+            type: string
+            default: >-
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1OTEyMzg3MX0.jUJtDJ6WlDPDNfoZKiXrnBWxHYWkHFNCBkSs84dRM-0
       requestBody:
         content:
           application/json:
@@ -2384,7 +3427,27 @@ paths:
       description: ''
       tags:
         - Meeting
-      parameters: []
+      parameters:
+        - name: authorization
+          in: header
+          description: ''
+          example: >-
+            Bearer
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1ODYwNTQ3MX0.h50lFaE8o5S7VHKTavjHrtxM1YV-_JP0Pj0irsmvPAs
+          schema:
+            type: string
+            default: >-
+              Bearer
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1ODYwNTQ3MX0.h50lFaE8o5S7VHKTavjHrtxM1YV-_JP0Pj0irsmvPAs
+        - name: refreshtoken
+          in: header
+          description: ''
+          example: >-
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1OTEyMzg3MX0.jUJtDJ6WlDPDNfoZKiXrnBWxHYWkHFNCBkSs84dRM-0
+          schema:
+            type: string
+            default: >-
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1OTEyMzg3MX0.jUJtDJ6WlDPDNfoZKiXrnBWxHYWkHFNCBkSs84dRM-0
       requestBody:
         content:
           application/json:
@@ -2434,6 +3497,26 @@ paths:
           example: 687e222cbdfe1de00e5ee43c
           schema:
             type: string
+        - name: authorization
+          in: header
+          description: ''
+          example: >-
+            Bearer
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1ODYwNTQ3MX0.h50lFaE8o5S7VHKTavjHrtxM1YV-_JP0Pj0irsmvPAs
+          schema:
+            type: string
+            default: >-
+              Bearer
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1ODYwNTQ3MX0.h50lFaE8o5S7VHKTavjHrtxM1YV-_JP0Pj0irsmvPAs
+        - name: refreshtoken
+          in: header
+          description: ''
+          example: >-
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1OTEyMzg3MX0.jUJtDJ6WlDPDNfoZKiXrnBWxHYWkHFNCBkSs84dRM-0
+          schema:
+            type: string
+            default: >-
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1OTEyMzg3MX0.jUJtDJ6WlDPDNfoZKiXrnBWxHYWkHFNCBkSs84dRM-0
       responses:
         '200':
           description: ''
@@ -2452,7 +3535,27 @@ paths:
       description: ''
       tags:
         - Meeting
-      parameters: []
+      parameters:
+        - name: authorization
+          in: header
+          description: ''
+          example: >-
+            Bearer
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1ODYwNTQ3MX0.h50lFaE8o5S7VHKTavjHrtxM1YV-_JP0Pj0irsmvPAs
+          schema:
+            type: string
+            default: >-
+              Bearer
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1ODYwNTQ3MX0.h50lFaE8o5S7VHKTavjHrtxM1YV-_JP0Pj0irsmvPAs
+        - name: refreshtoken
+          in: header
+          description: ''
+          example: >-
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1OTEyMzg3MX0.jUJtDJ6WlDPDNfoZKiXrnBWxHYWkHFNCBkSs84dRM-0
+          schema:
+            type: string
+            default: >-
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1OTEyMzg3MX0.jUJtDJ6WlDPDNfoZKiXrnBWxHYWkHFNCBkSs84dRM-0
       responses:
         '200':
           description: ''
@@ -2479,6 +3582,26 @@ paths:
           example: 685e616e25cb4a8109b36ad0
           schema:
             type: string
+        - name: authorization
+          in: header
+          description: ''
+          example: >-
+            Bearer
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1ODYwNTQ3MX0.h50lFaE8o5S7VHKTavjHrtxM1YV-_JP0Pj0irsmvPAs
+          schema:
+            type: string
+            default: >-
+              Bearer
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1ODYwNTQ3MX0.h50lFaE8o5S7VHKTavjHrtxM1YV-_JP0Pj0irsmvPAs
+        - name: refreshtoken
+          in: header
+          description: ''
+          example: >-
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1OTEyMzg3MX0.jUJtDJ6WlDPDNfoZKiXrnBWxHYWkHFNCBkSs84dRM-0
+          schema:
+            type: string
+            default: >-
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1OTEyMzg3MX0.jUJtDJ6WlDPDNfoZKiXrnBWxHYWkHFNCBkSs84dRM-0
       responses:
         '200':
           description: ''
@@ -2533,6 +3656,26 @@ paths:
           example: 68412a81eafa464c9f44c3fc
           schema:
             type: string
+        - name: authorization
+          in: header
+          description: ''
+          example: >-
+            Bearer
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1ODYwNTQ3MX0.h50lFaE8o5S7VHKTavjHrtxM1YV-_JP0Pj0irsmvPAs
+          schema:
+            type: string
+            default: >-
+              Bearer
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1ODYwNTQ3MX0.h50lFaE8o5S7VHKTavjHrtxM1YV-_JP0Pj0irsmvPAs
+        - name: refreshtoken
+          in: header
+          description: ''
+          example: >-
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1OTEyMzg3MX0.jUJtDJ6WlDPDNfoZKiXrnBWxHYWkHFNCBkSs84dRM-0
+          schema:
+            type: string
+            default: >-
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1OTEyMzg3MX0.jUJtDJ6WlDPDNfoZKiXrnBWxHYWkHFNCBkSs84dRM-0
       responses:
         '200':
           description: ''
@@ -2566,6 +3709,26 @@ paths:
           example: 685916dec510f307db29d5ae
           schema:
             type: string
+        - name: authorization
+          in: header
+          description: ''
+          example: >-
+            Bearer
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1ODYwNTQ3MX0.h50lFaE8o5S7VHKTavjHrtxM1YV-_JP0Pj0irsmvPAs
+          schema:
+            type: string
+            default: >-
+              Bearer
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1ODYwNTQ3MX0.h50lFaE8o5S7VHKTavjHrtxM1YV-_JP0Pj0irsmvPAs
+        - name: refreshtoken
+          in: header
+          description: ''
+          example: >-
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1OTEyMzg3MX0.jUJtDJ6WlDPDNfoZKiXrnBWxHYWkHFNCBkSs84dRM-0
+          schema:
+            type: string
+            default: >-
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1OTEyMzg3MX0.jUJtDJ6WlDPDNfoZKiXrnBWxHYWkHFNCBkSs84dRM-0
       responses:
         '200':
           description: ''
@@ -2606,6 +3769,26 @@ paths:
           example: 68412a81eafa464c9f44c3fc
           schema:
             type: string
+        - name: authorization
+          in: header
+          description: ''
+          example: >-
+            Bearer
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1ODYwNTQ3MX0.h50lFaE8o5S7VHKTavjHrtxM1YV-_JP0Pj0irsmvPAs
+          schema:
+            type: string
+            default: >-
+              Bearer
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1ODYwNTQ3MX0.h50lFaE8o5S7VHKTavjHrtxM1YV-_JP0Pj0irsmvPAs
+        - name: refreshtoken
+          in: header
+          description: ''
+          example: >-
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1OTEyMzg3MX0.jUJtDJ6WlDPDNfoZKiXrnBWxHYWkHFNCBkSs84dRM-0
+          schema:
+            type: string
+            default: >-
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1OTEyMzg3MX0.jUJtDJ6WlDPDNfoZKiXrnBWxHYWkHFNCBkSs84dRM-0
       requestBody:
         content:
           application/json:
@@ -2652,6 +3835,26 @@ paths:
           example: 68412a81eafa464c9f44c3fc
           schema:
             type: string
+        - name: authorization
+          in: header
+          description: ''
+          example: >-
+            Bearer
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1ODYwNTQ3MX0.h50lFaE8o5S7VHKTavjHrtxM1YV-_JP0Pj0irsmvPAs
+          schema:
+            type: string
+            default: >-
+              Bearer
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1ODYwNTQ3MX0.h50lFaE8o5S7VHKTavjHrtxM1YV-_JP0Pj0irsmvPAs
+        - name: refreshtoken
+          in: header
+          description: ''
+          example: >-
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1OTEyMzg3MX0.jUJtDJ6WlDPDNfoZKiXrnBWxHYWkHFNCBkSs84dRM-0
+          schema:
+            type: string
+            default: >-
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1OTEyMzg3MX0.jUJtDJ6WlDPDNfoZKiXrnBWxHYWkHFNCBkSs84dRM-0
       requestBody:
         content:
           application/json:
@@ -2685,6 +3888,26 @@ paths:
           example: 68412a81eafa464c9f44c3fc
           schema:
             type: string
+        - name: authorization
+          in: header
+          description: ''
+          example: >-
+            Bearer
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1ODYwNTQ3MX0.h50lFaE8o5S7VHKTavjHrtxM1YV-_JP0Pj0irsmvPAs
+          schema:
+            type: string
+            default: >-
+              Bearer
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1ODYwNTQ3MX0.h50lFaE8o5S7VHKTavjHrtxM1YV-_JP0Pj0irsmvPAs
+        - name: refreshtoken
+          in: header
+          description: ''
+          example: >-
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1OTEyMzg3MX0.jUJtDJ6WlDPDNfoZKiXrnBWxHYWkHFNCBkSs84dRM-0
+          schema:
+            type: string
+            default: >-
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1OTEyMzg3MX0.jUJtDJ6WlDPDNfoZKiXrnBWxHYWkHFNCBkSs84dRM-0
       responses:
         '200':
           description: ''
@@ -2711,6 +3934,26 @@ paths:
           example: 6881d1bf39bbd387c42b712b
           schema:
             type: string
+        - name: authorization
+          in: header
+          description: ''
+          example: >-
+            Bearer
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1ODYwNTQ3MX0.h50lFaE8o5S7VHKTavjHrtxM1YV-_JP0Pj0irsmvPAs
+          schema:
+            type: string
+            default: >-
+              Bearer
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1ODYwNTQ3MX0.h50lFaE8o5S7VHKTavjHrtxM1YV-_JP0Pj0irsmvPAs
+        - name: refreshtoken
+          in: header
+          description: ''
+          example: >-
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1OTEyMzg3MX0.jUJtDJ6WlDPDNfoZKiXrnBWxHYWkHFNCBkSs84dRM-0
+          schema:
+            type: string
+            default: >-
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1OTEyMzg3MX0.jUJtDJ6WlDPDNfoZKiXrnBWxHYWkHFNCBkSs84dRM-0
       responses:
         '200':
           description: ''
@@ -2821,6 +4064,26 @@ paths:
           example: 10
           schema:
             type: number
+        - name: authorization
+          in: header
+          description: ''
+          example: >-
+            Bearer
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1ODYwNTQ3MX0.h50lFaE8o5S7VHKTavjHrtxM1YV-_JP0Pj0irsmvPAs
+          schema:
+            type: string
+            default: >-
+              Bearer
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1ODYwNTQ3MX0.h50lFaE8o5S7VHKTavjHrtxM1YV-_JP0Pj0irsmvPAs
+        - name: refreshtoken
+          in: header
+          description: ''
+          example: >-
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1OTEyMzg3MX0.jUJtDJ6WlDPDNfoZKiXrnBWxHYWkHFNCBkSs84dRM-0
+          schema:
+            type: string
+            default: >-
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1OTEyMzg3MX0.jUJtDJ6WlDPDNfoZKiXrnBWxHYWkHFNCBkSs84dRM-0
       responses:
         '200':
           description: ''
@@ -2854,6 +4117,26 @@ paths:
           example: '10'
           schema:
             type: string
+        - name: authorization
+          in: header
+          description: ''
+          example: >-
+            Bearer
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1ODYwNTQ3MX0.h50lFaE8o5S7VHKTavjHrtxM1YV-_JP0Pj0irsmvPAs
+          schema:
+            type: string
+            default: >-
+              Bearer
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1ODYwNTQ3MX0.h50lFaE8o5S7VHKTavjHrtxM1YV-_JP0Pj0irsmvPAs
+        - name: refreshtoken
+          in: header
+          description: ''
+          example: >-
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1OTEyMzg3MX0.jUJtDJ6WlDPDNfoZKiXrnBWxHYWkHFNCBkSs84dRM-0
+          schema:
+            type: string
+            default: >-
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1OTEyMzg3MX0.jUJtDJ6WlDPDNfoZKiXrnBWxHYWkHFNCBkSs84dRM-0
       requestBody:
         content:
           application/json:
@@ -2893,6 +4176,26 @@ paths:
           required: true
           schema:
             type: string
+        - name: authorization
+          in: header
+          description: ''
+          example: >-
+            Bearer
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1ODYwNTQ3MX0.h50lFaE8o5S7VHKTavjHrtxM1YV-_JP0Pj0irsmvPAs
+          schema:
+            type: string
+            default: >-
+              Bearer
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1ODYwNTQ3MX0.h50lFaE8o5S7VHKTavjHrtxM1YV-_JP0Pj0irsmvPAs
+        - name: refreshtoken
+          in: header
+          description: ''
+          example: >-
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1OTEyMzg3MX0.jUJtDJ6WlDPDNfoZKiXrnBWxHYWkHFNCBkSs84dRM-0
+          schema:
+            type: string
+            default: >-
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1OTEyMzg3MX0.jUJtDJ6WlDPDNfoZKiXrnBWxHYWkHFNCBkSs84dRM-0
       requestBody:
         content:
           multipart/form-data:
@@ -2936,6 +4239,26 @@ paths:
           required: true
           schema:
             type: string
+        - name: authorization
+          in: header
+          description: ''
+          example: >-
+            Bearer
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1ODYwNTQ3MX0.h50lFaE8o5S7VHKTavjHrtxM1YV-_JP0Pj0irsmvPAs
+          schema:
+            type: string
+            default: >-
+              Bearer
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1ODYwNTQ3MX0.h50lFaE8o5S7VHKTavjHrtxM1YV-_JP0Pj0irsmvPAs
+        - name: refreshtoken
+          in: header
+          description: ''
+          example: >-
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1OTEyMzg3MX0.jUJtDJ6WlDPDNfoZKiXrnBWxHYWkHFNCBkSs84dRM-0
+          schema:
+            type: string
+            default: >-
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1OTEyMzg3MX0.jUJtDJ6WlDPDNfoZKiXrnBWxHYWkHFNCBkSs84dRM-0
       responses:
         '200':
           description: ''
@@ -2954,7 +4277,27 @@ paths:
       description: ''
       tags:
         - Docusign
-      parameters: []
+      parameters:
+        - name: authorization
+          in: header
+          description: ''
+          example: >-
+            Bearer
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1ODYwNTQ3MX0.h50lFaE8o5S7VHKTavjHrtxM1YV-_JP0Pj0irsmvPAs
+          schema:
+            type: string
+            default: >-
+              Bearer
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1ODYwNTQ3MX0.h50lFaE8o5S7VHKTavjHrtxM1YV-_JP0Pj0irsmvPAs
+        - name: refreshtoken
+          in: header
+          description: ''
+          example: >-
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1OTEyMzg3MX0.jUJtDJ6WlDPDNfoZKiXrnBWxHYWkHFNCBkSs84dRM-0
+          schema:
+            type: string
+            default: >-
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1OTEyMzg3MX0.jUJtDJ6WlDPDNfoZKiXrnBWxHYWkHFNCBkSs84dRM-0
       requestBody:
         content:
           application/json:
@@ -2993,6 +4336,26 @@ paths:
           required: true
           schema:
             type: string
+        - name: authorization
+          in: header
+          description: ''
+          example: >-
+            Bearer
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1ODYwNTQ3MX0.h50lFaE8o5S7VHKTavjHrtxM1YV-_JP0Pj0irsmvPAs
+          schema:
+            type: string
+            default: >-
+              Bearer
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1ODYwNTQ3MX0.h50lFaE8o5S7VHKTavjHrtxM1YV-_JP0Pj0irsmvPAs
+        - name: refreshtoken
+          in: header
+          description: ''
+          example: >-
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1OTEyMzg3MX0.jUJtDJ6WlDPDNfoZKiXrnBWxHYWkHFNCBkSs84dRM-0
+          schema:
+            type: string
+            default: >-
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1OTEyMzg3MX0.jUJtDJ6WlDPDNfoZKiXrnBWxHYWkHFNCBkSs84dRM-0
       responses:
         '200':
           description: ''
@@ -3017,6 +4380,26 @@ paths:
           required: true
           schema:
             type: string
+        - name: authorization
+          in: header
+          description: ''
+          example: >-
+            Bearer
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1ODYwNTQ3MX0.h50lFaE8o5S7VHKTavjHrtxM1YV-_JP0Pj0irsmvPAs
+          schema:
+            type: string
+            default: >-
+              Bearer
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1ODYwNTQ3MX0.h50lFaE8o5S7VHKTavjHrtxM1YV-_JP0Pj0irsmvPAs
+        - name: refreshtoken
+          in: header
+          description: ''
+          example: >-
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1OTEyMzg3MX0.jUJtDJ6WlDPDNfoZKiXrnBWxHYWkHFNCBkSs84dRM-0
+          schema:
+            type: string
+            default: >-
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1OTEyMzg3MX0.jUJtDJ6WlDPDNfoZKiXrnBWxHYWkHFNCBkSs84dRM-0
       requestBody:
         content:
           application/json:
@@ -3048,7 +4431,27 @@ paths:
       description: ''
       tags:
         - Footer
-      parameters: []
+      parameters:
+        - name: authorization
+          in: header
+          description: ''
+          example: >-
+            Bearer
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1ODYwNTQ3MX0.h50lFaE8o5S7VHKTavjHrtxM1YV-_JP0Pj0irsmvPAs
+          schema:
+            type: string
+            default: >-
+              Bearer
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1ODYwNTQ3MX0.h50lFaE8o5S7VHKTavjHrtxM1YV-_JP0Pj0irsmvPAs
+        - name: refreshtoken
+          in: header
+          description: ''
+          example: >-
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1OTEyMzg3MX0.jUJtDJ6WlDPDNfoZKiXrnBWxHYWkHFNCBkSs84dRM-0
+          schema:
+            type: string
+            default: >-
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1OTEyMzg3MX0.jUJtDJ6WlDPDNfoZKiXrnBWxHYWkHFNCBkSs84dRM-0
       responses:
         '200':
           description: ''
@@ -3068,14 +4471,26 @@ paths:
       tags:
         - LandingPage
       parameters:
-        - name: refreshToken
+        - name: authorization
           in: header
           description: ''
-          required: false
           example: >-
-            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NjUxOTBkNDhhODQxNzIwYmYwY2NmZiIsInJvbGUiOiJCb3Jyb3dlciIsImlhdCI6MTc1MTk1NDI5NywiZXhwIjoxNzUyNTU5MDk3fQ.iPIbbwUoCwZgC4gQJHNK8C07pxhZ3Pw0IiOINGJsIN4
+            Bearer
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1ODYwNTQ3MX0.h50lFaE8o5S7VHKTavjHrtxM1YV-_JP0Pj0irsmvPAs
           schema:
             type: string
+            default: >-
+              Bearer
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1ODYwNTQ3MX0.h50lFaE8o5S7VHKTavjHrtxM1YV-_JP0Pj0irsmvPAs
+        - name: refreshtoken
+          in: header
+          description: ''
+          example: >-
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1OTEyMzg3MX0.jUJtDJ6WlDPDNfoZKiXrnBWxHYWkHFNCBkSs84dRM-0
+          schema:
+            type: string
+            default: >-
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1OTEyMzg3MX0.jUJtDJ6WlDPDNfoZKiXrnBWxHYWkHFNCBkSs84dRM-0
       responses:
         '200':
           description: ''
@@ -3085,8 +4500,7 @@ paths:
                 type: object
                 properties: {}
           headers: {}
-      security:
-        - bearer: []
+      security: []
   /user/profile/{id}:
     get:
       summary: get-profile-by-id
@@ -3101,6 +4515,26 @@ paths:
           required: true
           schema:
             type: string
+        - name: authorization
+          in: header
+          description: ''
+          example: >-
+            Bearer
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1ODYwNTQ3MX0.h50lFaE8o5S7VHKTavjHrtxM1YV-_JP0Pj0irsmvPAs
+          schema:
+            type: string
+            default: >-
+              Bearer
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1ODYwNTQ3MX0.h50lFaE8o5S7VHKTavjHrtxM1YV-_JP0Pj0irsmvPAs
+        - name: refreshtoken
+          in: header
+          description: ''
+          example: >-
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1OTEyMzg3MX0.jUJtDJ6WlDPDNfoZKiXrnBWxHYWkHFNCBkSs84dRM-0
+          schema:
+            type: string
+            default: >-
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1OTEyMzg3MX0.jUJtDJ6WlDPDNfoZKiXrnBWxHYWkHFNCBkSs84dRM-0
       responses:
         '200':
           description: ''
@@ -3112,27 +4546,69 @@ paths:
           headers: {}
       security:
         - bearer: []
-  /user/profile/{type}/{id}:
+  /user/profile/Borrower/{id}:
     patch:
-      summary: update-profile-by-id
+      summary: update-borrower-profile
       deprecated: false
       description: ''
       tags:
         - Profile
       parameters:
-        - name: type
-          in: path
-          description: ''
-          required: true
-          example: Borrower
-          schema:
-            type: string
         - name: id
           in: path
           description: ''
           required: true
           schema:
             type: string
+        - name: authorization
+          in: header
+          description: ''
+          example: >-
+            Bearer
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1ODYwNTQ3MX0.h50lFaE8o5S7VHKTavjHrtxM1YV-_JP0Pj0irsmvPAs
+          schema:
+            type: string
+            default: >-
+              Bearer
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1ODYwNTQ3MX0.h50lFaE8o5S7VHKTavjHrtxM1YV-_JP0Pj0irsmvPAs
+        - name: refreshtoken
+          in: header
+          description: ''
+          example: >-
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1OTEyMzg3MX0.jUJtDJ6WlDPDNfoZKiXrnBWxHYWkHFNCBkSs84dRM-0
+          schema:
+            type: string
+            default: >-
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1OTEyMzg3MX0.jUJtDJ6WlDPDNfoZKiXrnBWxHYWkHFNCBkSs84dRM-0
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties: {}
+            example:
+              firstName: Prescott
+              middleInitial: Ignacia Tillman
+              lastName: Lamb
+              phone: (123) 456-7890
+              workPhone: ''
+              suiteNo: ''
+              email: sesocimovu@mailinator.com
+              email2: ''
+              webUrl: ''
+              linkedinUrl: ''
+              coname: Berg and Deleon Traders
+              position: office_manager
+              address:
+                - null
+              financialInstitutionName: ''
+              title: ''
+              areaOfSpecialty: ''
+              bankType: ''
+              assetSize: ''
+              financialInstitutionAddress:
+                - null
+              other_position: ''
       responses:
         '200':
           description: ''
@@ -3152,7 +4628,27 @@ paths:
       description: ''
       tags:
         - Profile
-      parameters: []
+      parameters:
+        - name: authorization
+          in: header
+          description: ''
+          example: >-
+            Bearer
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1ODYwNTQ3MX0.h50lFaE8o5S7VHKTavjHrtxM1YV-_JP0Pj0irsmvPAs
+          schema:
+            type: string
+            default: >-
+              Bearer
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1ODYwNTQ3MX0.h50lFaE8o5S7VHKTavjHrtxM1YV-_JP0Pj0irsmvPAs
+        - name: refreshtoken
+          in: header
+          description: ''
+          example: >-
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1OTEyMzg3MX0.jUJtDJ6WlDPDNfoZKiXrnBWxHYWkHFNCBkSs84dRM-0
+          schema:
+            type: string
+            default: >-
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1OTEyMzg3MX0.jUJtDJ6WlDPDNfoZKiXrnBWxHYWkHFNCBkSs84dRM-0
       responses:
         '200':
           description: ''
@@ -3164,19 +4660,85 @@ paths:
           headers: {}
       security:
         - bearer: []
+  /user/profile/Banker/{id}:
+    patch:
+      summary: update-banke-profile
+      deprecated: false
+      description: ''
+      tags:
+        - Profile
+      parameters:
+        - name: id
+          in: path
+          description: ''
+          required: true
+          schema:
+            type: string
+        - name: authorization
+          in: header
+          description: ''
+          example: >-
+            Bearer
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1ODYwNTQ3MX0.h50lFaE8o5S7VHKTavjHrtxM1YV-_JP0Pj0irsmvPAs
+          schema:
+            type: string
+            default: >-
+              Bearer
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1ODYwNTQ3MX0.h50lFaE8o5S7VHKTavjHrtxM1YV-_JP0Pj0irsmvPAs
+        - name: refreshtoken
+          in: header
+          description: ''
+          example: >-
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1OTEyMzg3MX0.jUJtDJ6WlDPDNfoZKiXrnBWxHYWkHFNCBkSs84dRM-0
+          schema:
+            type: string
+            default: >-
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YzI2YmNkOWIwZGNlZjJiMmNiNGEyMSIsInJvbGUiOiJCYW5rZXIiLCJpYXQiOjE3NTg1MTkwNzEsImV4cCI6MTc1OTEyMzg3MX0.jUJtDJ6WlDPDNfoZKiXrnBWxHYWkHFNCBkSs84dRM-0
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                personData:
+                  example: >-
+                    {"firstName":"Linus","middleInitial":"Fitzgerald
+                    Bird","lastName":"Morgan","phone":"(123)
+                    456-7890","workPhone":"","suiteNo":"","email":"wikonage@mailinator.com","email2":"","webUrl":"","linkedinUrl":"","financialInstitutionName":"Guy
+                    Santana","title":"Praesentium non ut
+                    m","bankType":"Retail","assetSize":"Medium","address":[null],"financialInstitutionAddress":[{"_id":"68d0f36273cb820461c800ed","address1":null,"address2":null,"city":"Virginia
+                    Beach","state":"Virginia","zip":null,"country":"United
+                    States","longitude":"-75.97921939999999","latitude":"36.8516437","fullAddress":"Virginia
+                    Beach, VA,
+                    USA","suiteNo":"","createdBy":"68d0f36273cb820461c800eb","createdAt":"2025-09-22T06:57:38.406Z","updatedAt":"2025-09-22T06:57:38.406Z","__v":0}],"areaOfSpecialty":"Equipment
+                    Finance","coname":"","position":"","other_position":""}
+                  type: string
+                bankLogo:
+                  format: binary
+                  type: string
+                  example: ''
+            examples: {}
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: {}
+              example: "//Borrower\r\n{\r\n    \"firstName\": \"Helly\",\r\n    \"middleInitial\": \"\",\r\n    \"lastName\": \"Patel\",\r\n    \"phone\": \"(123) 456-7890\",\r\n    \"workPhone\": \"\",\r\n    \"suiteNo\": \"ddsd\",\r\n    \"email\": \"helly.patel.ordex@gmail.com\",\r\n    \"email2\": \"\",\r\n    \"webUrl\": \"\",\r\n    \"linkedinUrl\": \"\",\r\n    \"coname\": \"juu\",\r\n    \"position\": \"managing_partner\",\r\n    \"address\": [\r\n        {\r\n            \"address1\": null,\r\n            \"address2\": null,\r\n            \"city\": \"Seattle\",\r\n            \"state\": \"Washington\",\r\n            \"zip\": null,\r\n            \"country\": \"United States\",\r\n            \"longitude\": \"-122.3328481\",\r\n            \"latitude\": \"47.6061389\",\r\n            \"fullAddress\": \"Seattle, WA, USA\",\r\n            \"suiteNo\": \"\"\r\n        }\r\n    ],\r\n    \"financialInstitutionName\": \"\",\r\n    \"title\": \"\",\r\n    \"areaOfSpecialty\": \"\",\r\n    \"bankType\": \"\",\r\n    \"assetSize\": \"\",\r\n    \"financialInstitutionAddress\": [\r\n        null\r\n    ],\r\n    \"other_position\": \"\"\r\n}\r\n//banker\r\n{\r\n    \"firstName\": \"Ariel\",\r\n    \"middleInitial\": \"Kay Noel\",\r\n    \"lastName\": \"Dejesus\",\r\n    \"phone\": \"(123) 456-7890\",\r\n    \"workPhone\": \"\",\r\n    \"suiteNo\": \"\",\r\n    \"email\": \"mari@mailinator.com\",\r\n    \"email2\": \"\",\r\n    \"webUrl\": \"\",\r\n    \"linkedinUrl\": \"\",\r\n    \"financialInstitutionName\": \"John Michael\",\r\n    \"title\": \"Assumenda quidem in \",\r\n    \"bankType\": \"Investment\",\r\n    \"assetSize\": \"Small\",\r\n    \"address\": [\r\n        null\r\n    ],\r\n    \"financialInstitutionAddress\": [\r\n        {\r\n            \"_id\": \"68c95e2c58367e1019c11b0f\",\r\n            \"address1\": null,\r\n            \"address2\": null,\r\n            \"city\": \"Moscow\",\r\n            \"state\": \"Idaho\",\r\n            \"zip\": \"83843\",\r\n            \"country\": \"United States\",\r\n            \"longitude\": \"-117.0107557\",\r\n            \"latitude\": \"46.7219257\",\r\n            \"fullAddress\": \"1122 King Rd, Moscow, ID 83843, USA\",\r\n            \"suiteNo\": \"\",\r\n            \"createdBy\": \"68c95e2c58367e1019c11b0d\",\r\n            \"createdAt\": \"2025-09-16T12:55:08.764Z\",\r\n            \"updatedAt\": \"2025-09-16T12:55:08.764Z\",\r\n            \"__v\": 0\r\n        }\r\n    ],\r\n    \"areaOfSpecialty\": \"Factoring\",\r\n    \"coname\": \"\",\r\n    \"position\": \"\",\r\n    \"other_position\": \"\"\r\n}"
+          headers: {}
+      security:
+        - bearer: []
+webhooks: {}
 components:
   schemas: {}
   securitySchemes:
     bearer:
       type: http
       scheme: bearer
-    RefreshTokenAuth:
-      type: apiKey
-      in: header
-      name: refreshToken
 servers:
   - url: https://dev.aloanmatic.com/api/
     description: Develop Env
   - url: http://localhost:3000/
     description: local
-security: []
